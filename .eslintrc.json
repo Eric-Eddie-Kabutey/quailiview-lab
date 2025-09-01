@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "prettier" // Keep this if you installed prettier
+  ],
+  "plugins": [
+    "prettier", // Keep this if you installed prettier
+    "unused-imports" // Add this plugin
+  ],
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }], // Keep this if you installed prettier
+    // ESLint's original no-unused-vars
+    "no-unused-vars": "off",
+    // TypeScript's no-unused-vars (if you have @typescript-eslint/eslint-plugin configured)
+    "@typescript-eslint/no-unused-vars": "off",
+    // Rules from eslint-plugin-unused-imports
+    "unused-imports/no-unused-imports": "warn", // Or "error" for a stricter rule
+    "unused-imports/no-unused-vars": [
+      "warn", // Or "error"
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
