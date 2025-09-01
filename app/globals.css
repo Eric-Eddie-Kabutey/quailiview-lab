@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.bg-color-light {
+  color: "#0A7175";
+}
+
+.bg-color-dark {
+  color: "#03444A";
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  /* For vertical carousel */
+  flex-direction: column;
+  height: 100%;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-height: 0;
+}
