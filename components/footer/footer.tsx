@@ -51,9 +51,9 @@ const itemVariants: Variants = {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-white pt-24 pb-12 overflow-hidden">
+    <footer className="relative bg-black text-white pt-24 pb-24 md:pb-52 overflow-hidden">
       {/* Background layers remain unchanged */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 z-0 opacity-10 pointer-events-none">
+      <div className="absolute bottom-4 md:bottom-1 left-2 right-2 h-1/2 z-0 opacity-30 pointer-events-none">
         <Image
           src="/assets/logo/brand-logo.png"
           alt=""
@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
       <div className="absolute inset-0 flex justify-around opacity-30 pointer-events-none z-10">
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px border-r border-dashed border-gray-700" />
+          <div key={i} className="w-px border-r border-dashed border-gray-500" />
         ))}
       </div>
 
