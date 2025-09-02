@@ -22,6 +22,7 @@ export interface SimpleDropdownItem {
 
 export interface ServiceColumn {
     title: string;
+    href?: string;
     links: ServiceLink[];
 }
 
