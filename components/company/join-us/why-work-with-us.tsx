@@ -51,7 +51,7 @@ export default function WhyWorkWithUs() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6"
+        className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           

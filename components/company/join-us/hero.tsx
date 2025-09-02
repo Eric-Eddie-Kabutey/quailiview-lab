@@ -32,7 +32,7 @@ export default function JoinUsHero() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6"
+        className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           

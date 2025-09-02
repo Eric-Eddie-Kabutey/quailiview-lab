@@ -41,7 +41,7 @@ export default function MissionVision() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6"
+        className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0"
       >
         {/* Top horizontal divider */}
         <div className="border-t border-gray-200" />

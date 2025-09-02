@@ -27,7 +27,7 @@ export default function AboutHero() {
       </div>
 
       {/* Main container with padding and full-screen behavior on xl devices */}
-      <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6 xl:flex xl:flex-col xl:min-h-screen">
+      <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0 xl:flex xl:flex-col xl:min-h-screen">
         <motion.div
           variants={containerVariants}
           initial="hidden"
