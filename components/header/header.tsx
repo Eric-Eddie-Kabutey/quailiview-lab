@@ -170,10 +170,10 @@ const DesktopNav = () => (
 											(column: ServiceColumn) => (
 												<div
 													key={column.title}
-													className='flex flex-col space-y-2'>
-													<h3 className='font-semibold text-sm mb-2'>
+													className='flex flex-col space-y-2'>													
+													<Link href={column.href ?? ""} className='font-semibold text-sm mb-2'>
 														{column.title}
-													</h3>
+													</Link>
 													{column.links.map((link) => (
 														<Link
 															key={link.title}
@@ -235,7 +235,9 @@ const MobileNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => (
 										value={`sub-item-${colIndex}`}
 										key={column.title}>
 										<AccordionTrigger className='text-sm font-semibold'>
-											{column.title}
+											<Link href={column.href ?? ""} className='font-semibold text-sm' onClick={() => setIsOpen(false)}>
+														{column.title}
+													</Link>											
 										</AccordionTrigger>
 										<AccordionContent>
 											{/* Scrollable Container */}
