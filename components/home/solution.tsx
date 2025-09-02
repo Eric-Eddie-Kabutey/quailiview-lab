@@ -58,14 +58,14 @@ export default function SolutionsSection() {
       {/* Dotted background */}
       <div className="absolute inset-0 flex justify-around opacity-75">
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
+          <div key={i} className="w-px border-r border-dashed border-gray-200" />
         ))}
       </div>
 
-      <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <p className="font-semibold text-brand-teal">SOLUTIONS</p>
+          <p className="font-semibold text-[#8E92A2]">SOLUTIONS</p>
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
             Comprehensive Software Solutions, Built for the Future
           </h2>
@@ -121,7 +121,9 @@ export default function SolutionsSection() {
                                   <Image width={100} height={100} src="/assets/icons/icon3.png" alt="Industry UI mockup" className="rounded-lg shadow-lg w-full max-w-[200px]" />
                               </div>
                           }
-            />
+                      />
+                      {/* action button */}
+                      
 
           </div>
         </div>

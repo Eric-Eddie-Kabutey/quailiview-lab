@@ -44,11 +44,11 @@ export default function HowItWorks() {
       {/* Re-using the dotted background, now with a darker color */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
+          <div key={i} className="w-px border-r border-dashed border-gray-500" style={{ backgroundSize: '1px 8px' }} />
         ))}
       </div>
 
-      <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-semibold text-gray-400">HOW IT WORKS</p>

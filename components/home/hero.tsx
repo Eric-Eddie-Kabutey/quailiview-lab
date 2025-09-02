@@ -1,23 +1,22 @@
-// src/components/HeroSection.tsx
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Bot, CheckCircle2, Clock } from 'lucide-react';
+import { CheckCircle2, Clock } from 'lucide-react';
 import Image from 'next/image';
 
 export default function HeroSection() {
   return (
     // Section takes up at least the full viewport height and centers content vertically
-    <section className="relative min-h-screen flex items-center bg-white">
+    <section className="relative min-h-screen pt-6 flex items-center bg-white">
       {/* Faint vertical grid lines for background effect */}
       <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-4">
         {[...Array(12)].map((_, i) => (
-          <div key={i} className="border-r border-gray-100"></div>
+          <div key={i} className="w-px border-r border-dashed border-gray-200"></div>
         ))}
       </div>
 
       {/* Main content container */}
-      <div className="relative mx-auto w-full lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+      <div className="relative mx-auto w-full lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Text Content */}
@@ -29,8 +28,9 @@ export default function HeroSection() {
           >
             <div>
               <div className="inline-flex items-center gap-2 bg-teal-50 text-teal-800 font-semibold px-3 py-1.5 rounded-full text-sm self-start">
-                <Bot className="w-5 h-5" />
-                Tested by AI. Perfected by Humans.
+                {/* <Bot className="w-5 h-5" /> */}
+                              Tested by AI. Perfected by Humans.
+                              <Image src="/assets/icons/bot.png" alt='Bot image' width={100} height={100} className='w-5 h-5' />
               </div>
               <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tighter text-gray-900">
                 Smart, Fast, Reliable Software Testing
@@ -42,9 +42,9 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="mt-2">
-              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-white bg-[#0f4c5c] rounded-lg shadow-sm hover:bg-[#0c3b47] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#0f4c5c] focus:ring-offset-2">
-                Get Started
-                <ArrowRight className="w-5 h-5" />
+              <button className="inline-flex items-center justify-center gap-4 px-6 py-3 font-semibold text-white bg-[#0f4c5c] rounded-lg shadow-sm hover:bg-[#0c3b47] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#0f4c5c] focus:ring-offset-2">
+                Get Started                
+                <Image src="/assets/icons/arrow-next-page.png" alt='Arrow right image' width={60} height={24} className='w-auto h-2.5 md:h-3' />
               </button>
             </div>
 

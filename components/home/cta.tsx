@@ -11,11 +11,11 @@ export default function CTA() {
       {/* Background with subtle vertical lines (optional, but matches other sections) */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
+          <div key={i} className="w-px border-r border-dashed border-gray-500" style={{ backgroundSize: '1px 8px' }} />
         ))}
       </div>
 
-      <div className="mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column: Text Content and Button */}
           <motion.div
