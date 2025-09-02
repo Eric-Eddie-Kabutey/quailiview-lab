@@ -15,9 +15,9 @@ export const navigationData: NavItem[] = [
         dropdownContent: {
             type: 'simple',
             items: [
-                { title: 'About Us', href: '#', description: 'Innovative solutions, exceptional value, industry expertise.', icon: Info },
-                { title: 'Management', href: '#', description: 'Experienced leaders driving growth and innovation.', icon: Users },
-                { title: 'Join Us', href: '#', description: 'Great careers, competitive benefits, dynamic team.', icon: Rocket },
+                { title: 'About Us', href: '/about-us', description: 'Innovative solutions, exceptional value, industry expertise.', icon: Info },
+                { title: 'Management', href: '/management', description: 'Experienced leaders driving growth and innovation.', icon: Users },
+                { title: 'Join Us', href: '/join-us', description: 'Great careers, competitive benefits, dynamic team.', icon: Rocket },
             ],
         },
     },
