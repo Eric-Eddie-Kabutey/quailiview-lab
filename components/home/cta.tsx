@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="relative bg-[#03444A] text-white py-24 sm:py-24 overflow-hidden">
+    <section className="md:relative bg-[#03444A] text-white py-24 sm:py-24 overflow-hidden">
       {/* Background with subtle vertical lines (optional, but matches other sections) */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
@@ -16,14 +16,14 @@ export default function CTA() {
       </div>
 
       <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col items-start justify-between">
           {/* Left Column: Text Content and Button */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="flex flex-col gap-6"
+            className="flex-1 flex flex-col gap-6"
           >
             <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
               Ready to Ship Bug-Free Software, Faster?
@@ -38,14 +38,14 @@ export default function CTA() {
               </button>
             </div>
           </motion.div>
-
-          {/* Right Column: Globe Image */}
-          <motion.div
+          
+          {/* Mobile Right Column: Globe Image */}
+           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="absolute top-0 right-0 bottom-0 w-full h-80 sm:h-96 lg:h-full overflow-hidden"
+            className="hidden w-full"
           >
             <Image
               src="/assets/images/earth-europe.png"
@@ -56,6 +56,22 @@ export default function CTA() {
             />
           </motion.div>
         </div>
+          {/* Desktop Right Column: Globe Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+            className="hidden md:block absolute top-0 right-0 bottom-0 w-full h-80 sm:h-96 lg:h-full overflow-hidden"
+          >
+            <Image
+              src="/assets/images/earth-europe.png"
+              alt="Global network illustration"
+              fill
+              className="object-contain object-right" 
+              priority={false} 
+            />
+          </motion.div>
       </div>
     </section>
   );
