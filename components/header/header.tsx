@@ -64,7 +64,7 @@ export default function Header() {
                 
                 {/* desktop navigation */}				
                     <nav className='hidden lg:flex'>
-						<DesktopNav />
+						<DesktopNav setIsOpen={setIsOpen} />
 					</nav>
 
 				{/* Mobile Menu */}
@@ -135,7 +135,7 @@ export default function Header() {
 }
 
 // Desktop Navigation Component
-const DesktopNav = () => (
+const DesktopNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => (
 	<NavigationMenu>
 		<NavigationMenuList>
 			{navigationData.map((navItem) =>
@@ -170,8 +170,8 @@ const DesktopNav = () => (
 											(column: ServiceColumn) => (
 												<div
 													key={column.title}
-													className='flex flex-col space-y-2'>													
-													<Link href={column.href ?? ""} className='font-semibold text-sm mb-2'>
+													className='flex flex-col space-y-2'>
+													<Link href={column.href ?? ""} className='font-semibold text-sm mb-2' onClick={() => setIsOpen(false)}>
 														{column.title}
 													</Link>
 													{column.links.map((link) => (
