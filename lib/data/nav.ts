@@ -171,19 +171,19 @@ export const navigationData: NavItem[] = [
 			items: [
 				{
 					title: 'Blog',
-					href: '#',
+					href: '/blog',
 					description: 'Industry insights, expert tips, and company updates.',
 					icon: Newspaper,
 				},
 				{
 					title: 'Events',
-					href: '#',
+					href: '/event',
 					description: 'Upcoming conferences, workshops, and networking.',
 					icon: Calendar,
 				},
 				{
 					title: 'Case Studies',
-					href: '#',
+					href: '/case-studies',
 					description: 'Real client success stories and proven results.',
 					icon: FileText,
 				},
@@ -192,7 +192,7 @@ export const navigationData: NavItem[] = [
 	},
 	{
 		label: 'Contact Us',
-		href: '#',
+		href: '/contact-us',
 		isDropdown: false,
 	},
 ]
