@@ -34,3 +34,10 @@ const allEvents: Omit<Event, 'isPast'>[] = [
     },
 ];
 
+// Function to get only upcoming events
+export const getUpcomingEvents = (): Event[] => {
+    return allEvents
+        .map(event => ({ ...event, isPast: isPast(event.date) }))
+        .filter(event => !event.isPast)
+        .sort((a, b) => a.date.getTime() - b.date.getTime());
+};
