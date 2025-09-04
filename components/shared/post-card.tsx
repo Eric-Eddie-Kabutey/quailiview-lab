@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, Variants } from '@/components/module/framer-motion';
-import { Post } from '@/lib/types/post';
+import { Post } from '@/types/index';
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +15,7 @@ export default function PostCard({ post }: { post: Post }) {
   return (
     <motion.div variants={itemVariants} className="h-full">
       <Link href={postUrl} className="group block h-full">
-        <div className="flex flex-col h-full bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+        <div className="flex flex-col h-full bg-[#FAFFFF] rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
           
           {/* Image and Category Tag */}
           <div className="relative">
