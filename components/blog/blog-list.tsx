@@ -11,11 +11,10 @@ const containerVariants = {
   },
 };
 
-export default function BlogSection() {
+export default function BlogList() {
   return (
-    <section className="bg-slate-50/70 py-24 sm:py-32">
-      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
-        {/* You can add a header here if needed, e.g., "From the Blog" */}
+    <section className="bg-[#FAFFFF] py-24 sm:py-32">
+      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">        
         <motion.div
           variants={containerVariants}
           initial="hidden"

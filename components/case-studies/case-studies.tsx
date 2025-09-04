@@ -13,7 +13,7 @@ const containerVariants = {
 
 export default function CaseStudiesSection() {
   return (
-    <section className="bg-slate-50/70 py-24 sm:py-32">
+    <section className="bg-[#FAFFFF] py-24 sm:py-32">
       <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">        
         <motion.div
           variants={containerVariants}

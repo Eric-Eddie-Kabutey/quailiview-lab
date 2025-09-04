@@ -1,13 +1,19 @@
-import BlogSection from "@/components/blog/blog";
+import BlogSection from "@/components/blog/blog-hero";
 import CTA from "@/components/home/cta";
+import PaginatedPostGrid from "@/components/PaginatedPostGrid";
+import { mockPosts } from "@/data/mock-posts";
 
 export default function BlogPage() {
     return (<>
         {/* hero showing featured event */}
-        <h1>Our Blogs</h1>
+        <BlogSection /> 
 
         {/* blog listing */}
-        <BlogSection /> 
+         <PaginatedPostGrid 
+          title="All Blog Posts" 
+          initialPosts={mockPosts} 
+          postType="blog"
+        />
 
         {/* Cta - reusable */}
         <CTA />
