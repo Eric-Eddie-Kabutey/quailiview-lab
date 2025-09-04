@@ -14,7 +14,7 @@ const containerVariants = {
 export default function BlogSection() {
   return (
     <section className="bg-slate-50/70 py-24 sm:py-32">
-      <div className="mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
         {/* You can add a header here if needed, e.g., "From the Blog" */}
         <motion.div
           variants={containerVariants}
