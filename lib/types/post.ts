@@ -6,21 +6,22 @@ export interface Post {
     title: string;
     category: string;
     author: string;
-    publishedDate: string; // e.g., "August 23, 2025"
+    publishedDate: string; // for filtering and sorting
     readingTime: number; // in minutes
     summary: string; // A short excerpt for preview cards
     coverImage: string | StaticImageData;
     content: React.ReactNode; // This will hold the rendered MDX or HTML content
+    
 }
 
 export interface Event {
     slug: string;
     title: string;
-    date: Date;
-    format: string;
+    date: string;
+    format?: string;
     location?: string; // Optional for virtual events
     summary: string;
-    coverImage: StaticImageData;
+    coverImage: string | StaticImageData;
     isPast: boolean;
     content?: React.ReactNode; // for now even data is not provided
 }
