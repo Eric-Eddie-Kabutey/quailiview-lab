@@ -1,4 +1,5 @@
 import { Post } from '@/lib/types/post';
+import { subMonths, isAfter, format } from 'date-fns';
 
 // Import placeholder images
 import img1 from '../public/assets/images/blog/avoid-these-7-common-compliance-testing-mistakes.png';
@@ -75,4 +76,31 @@ export const mockPosts: Post[] = [
         coverImage: img6,
         content: '',
     },
+    {
+        slug: 'retail-apps-reduce-checkout-abandonment',
+        title: 'How Retail Apps Can Reduce Checkout Abandonment with Better QA',
+        category: 'Industry Trends',
+        author: 'Qualiview Lab Team',
+        publishedDate: 'Aug 29, 2025',
+        readingTime: 6,
+        summary: 'Speed, trust, and usability all impact checkout conversion. See how targeted testing can help you win more sales.',
+        coverImage: img6,
+        content: '',
+    },
 ];
+
+
+// This function runs on the SERVER. It filters and formats the data.
+export const getLatestPosts = (): Post[] => {
+    const oneMonthAgo = subMonths(new Date(), 1);
+    return mockPosts
+        .map(post => ({ ...post, dateObject: new Date(post.publishedDate) }))
+        .filter(post => isAfter(post.dateObject, oneMonthAgo))
+        .sort((a, b) => b.dateObject.getTime() - a.dateObject.getTime())
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        .map(({ dateObject, ...post }) => ({
+            ...post,
+            // Format the date into a user-friendly string before returning
+            publishedDate: format(new Date(post.publishedDate), 'MMM dd, yyyy'),
+        }));
+};
