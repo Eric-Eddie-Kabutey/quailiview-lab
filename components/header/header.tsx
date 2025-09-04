@@ -53,12 +53,13 @@ export default function Header() {
 	const [isOpen, setIsOpen] = React.useState(false)
 
 	return (
-		<header className='sticky top-0 z-50 w-full border-b md:border-b-0 bg-[#F6FAFC] backdrop-blur supports-[backdrop-filter]:bg-background/60'>
+		<header className='sticky top-0 z-50 w-full border-b md:border-b-0 bg-[#F6FAFC] '>
+			{/* backdrop-blur supports-[backdrop-filter]:bg-background/60 */}
             <div className='container mx-auto flex items-center justify-between h-16 lg:max-w-5xl xl:max-w-6xl'>
                 {/* site logo */}
 				<div className='mr-4 hidden md:flex'>
 					<Link href='/' className='mr-6 flex items-center space-x-2'>                        
-                        <Image src="/assets/logo/logo-white.png" alt='Site logo' width={100} height={24} />
+                        <Image src="/assets/logo/logo-colored.png" alt='Site logo' width={100} height={60} />
 					</Link>
                 </div>
                 
