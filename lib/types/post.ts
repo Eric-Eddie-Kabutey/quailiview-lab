@@ -12,3 +12,15 @@ export interface Post {
     coverImage: string | StaticImageData;
     content: React.ReactNode; // This will hold the rendered MDX or HTML content
 }
+
+export interface Event {
+    slug: string;
+    title: string;
+    date: Date;
+    format: string;
+    location?: string; // Optional for virtual events
+    summary: string;
+    coverImage: StaticImageData;
+    isPast: boolean;
+    content?: React.ReactNode; // for now even data is not provided
+}
