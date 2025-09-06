@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { motion, Variants } from '@/components/module/framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface HeroCarouselProps<T> {
@@ -34,7 +35,20 @@ export default function HeroCarousel<T extends { slug: string }>({
     onSelect();
     emblaApi.on('reInit', onSelect);
     emblaApi.on('select', onSelect);
-  }, [emblaApi, onSelect]);
+  }, [ emblaApi, onSelect ]);
+    
+    const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+};
 
   return (
     <section className="relative bg-brand-dark text-white py-24 sm:py-32 overflow-hidden">
@@ -44,14 +58,19 @@ export default function HeroCarousel<T extends { slug: string }>({
         ))}
       </div>
 
-      <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
-        <div className="max-w-3xl">
-          <p className="font-semibold text-white/80">{eyebrow}</p>
-          <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
-          <p className="mt-6 text-lg leading-8 text-white/70">{subtitle}</p>
-        </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+                <motion.div variants={itemVariants} className="max-w-3xl">
+                <p className="font-semibold text-white/80">{eyebrow}</p>
+                <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
+                <p className="mt-6 text-lg leading-8 text-white/70">{subtitle}</p>
+                </motion.div>
 
-        <div className="mt-16 flex justify-between items-center">
+        <motion.div variants={itemVariants} className="mt-16 flex justify-between items-center">
           <h2 className="text-2xl font-semibold">{carouselTitle}</h2>
           <div className="flex items-center gap-2">
             <button
@@ -69,9 +88,9 @@ export default function HeroCarousel<T extends { slug: string }>({
               <ArrowRight size={20} />
             </button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-8 -mx-4 sm:-mx-6 overflow-hidden" ref={emblaRef}>
+        <motion.div variants={itemVariants} className="mt-8 -mx-4 sm:-mx-6 overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {items.map((item) => (
               <div key={item.slug} className="flex-shrink-0 flex-grow-0 basis-full sm:basis-1/2 px-4 sm:px-6">
@@ -79,8 +98,8 @@ export default function HeroCarousel<T extends { slug: string }>({
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
