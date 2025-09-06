@@ -1,5 +1,5 @@
 import HeroCarousel from '../shared/hero-carousel';
-import { getUpcomingEvents } from '@/data/event-mock';
+import { getUpcomingEvents } from '@/data/mock-events';
 import EventHeroCard from '@/components/event/event-hero-card';
 import { Event } from '@/types/index';
 
