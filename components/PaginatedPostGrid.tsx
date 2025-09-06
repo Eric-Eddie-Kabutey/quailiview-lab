@@ -95,12 +95,12 @@ export default function PaginatedPostGrid({
 
 					{/* Desktop Filter Bar */}
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-2 mb-12 overflow-hidden'>
-						<div className='relative'>
+						<div className='relative p-1'>
 							<Search className='absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-600' />
 							<Input
 								type='search'
 								placeholder='Search...'
-								className='pl-10 text-gray-700 border border-gray-300 focus:border-gray-300'
+								className='pl-10 border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'
 								value={searchTerm}
 								onChange={(e) => {
 									setSearchTerm(e.target.value)
@@ -109,26 +109,26 @@ export default function PaginatedPostGrid({
 							/>
 						</div>
 
-						<div>
+						<div className='p-1'>
 							<Select value={sortOption} onValueChange={setSortOption}>
 								<SelectTrigger className='text-gray-600'>
-									<SelectValue />
+									<SelectValue className='text[#034440]' />
 								</SelectTrigger>
-								<SelectContent className='text-gray-600 bg-[#FAFFFF]'>
+								<SelectContent className='text-gray-600 bg-[#FAFFFF] border border-1[#03444A]'>
 									<SelectItem value='recent'>Most Recent</SelectItem>
 									<SelectItem value='oldest'>Oldest</SelectItem>
 								</SelectContent>
 							</Select>
 						</div>
 
-						<div>
+						<div className='p-1 w-full'>
 							<Select
 								value={selectedCategory}
 								onValueChange={setSelectedCategory}>
 								<SelectTrigger className='text-gray-600'>
 									<SelectValue />
 								</SelectTrigger>
-								<SelectContent className='text-gray-600 bg-[#FAFFFF]'>
+								<SelectContent className='text-gray-600 bg-[#FAFFFF] border border-1[#03444A]'>
 									{categories.map((cat) => (
 										<SelectItem key={cat} value={cat}>
 											{cat}
