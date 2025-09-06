@@ -37,7 +37,7 @@ const SolutionCard = ({
     <div className="flex items-end min-h-[260px]">
       {/* Text Part (Left) */}
       <div className="1/2 md:w-3/5 p-8 flex items-center">
-        <h3 className="text-lg md:text-3xl font-semibold text-gray-900">{title}</h3>
+        <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
       </div>
       {/* Visual Part (Right) */}
       <div className={`1/2 md:w-2/5 p-6 flex items-center justify-center ${visualBgColor}`}>
@@ -65,11 +65,11 @@ export default function SolutionsSection() {
       <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <p className="font-semibold text-[#8E92A2]">SOLUTIONS</p>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <p className="font-medium text-[#8E92A2]">SOLUTIONS</p>
+          <h2 className="mt-4 md:mt-6 text-4xl font-semibold tracking-tight leading-13 text-gray-900 sm:text-5xl">
             Comprehensive Software Solutions, Built for the Future
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 md:mt-8 text-lg leading-8 text-gray-600">
             From foundational functional tests to cutting-edge AI model validation, we cover every layer of your quality assurance needs.
           </p>
         </div>
