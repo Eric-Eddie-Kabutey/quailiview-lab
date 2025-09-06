@@ -69,7 +69,7 @@ export default function Footer() {
       </div>
 
       {/* Main Content with animations */}
-      <div className="relative z-20 mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
+      <div className="relative z-20 mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
         {/* Converted the grid container to a motion.div */}
         <motion.div
           variants={containerVariants}

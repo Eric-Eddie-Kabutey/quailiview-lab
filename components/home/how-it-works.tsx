@@ -51,11 +51,11 @@ export default function HowItWorks() {
       <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-semibold text-gray-400">HOW IT WORKS</p>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <p className="font-medium text-gray-400">HOW IT WORKS</p>
+          <h2 className="mt-4 md:mt-6  text-4xl font-bold tracking-tight leading-13 text-white sm:text-5xl">
             How Qualiview Lab Delivers Smarter Software Testing
           </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 md:mt-8 text-lg leading-8 text-gray-300">
             We combine the speed and scale of AI automation with the precision of human testers to ensure your software is tested faster, more thoroughly, and with real-world accuracy from initial scans to final validation.
           </p>
         </div>

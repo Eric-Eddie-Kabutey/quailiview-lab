@@ -16,7 +16,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main content container */}
-      <div className="relative mx-auto w-full lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
+      <div className="relative mx-auto w-full lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Column: Text Content */}
@@ -32,7 +32,7 @@ export default function HeroSection() {
                               Tested by AI. Perfected by Humans.
                               <Image src="/assets/icons/bot.png" alt='Bot image' width={100} height={100} className='w-5 h-5' />
               </div>
-              <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tighter text-gray-900">
+              <h1 className="mt-4 text-4xl sm:text-5xl font-semibold tracking-tighter leading-13 text-gray-900">
                 Smart, Fast, Reliable Software Testing
               </h1>
               <p className="mt-4 text-lg text-gray-600 leading-relaxed">

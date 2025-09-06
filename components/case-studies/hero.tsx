@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, Variants } from '@/components/module/framer-motion';
+import BackgroundEffect from '../shared/background-effect';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -18,12 +19,8 @@ const itemVariants: Variants = {
 export default function CaseStudiesHero() {
   return (
     <section className="relative bg-white pt-19 pb-15 sm:pt-32 md:pb-22">
-      {/* Consistent dotted background */}
-      <div className="absolute inset-0 flex justify-around opacity-75 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
-        ))}
-      </div>
+      {/* Consistent dotted background */}      
+      <BackgroundEffect lineColor='gray-200' />
 
       <motion.div
         variants={containerVariants}
