@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import {motion, Variants} from '@/components/module/framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 interface ContentCarouselHeroProps {
@@ -43,7 +44,20 @@ export default function ContentCarouselHero({
 		onSelect()
 		emblaApi.on('reInit', onSelect)
 		emblaApi.on('select', onSelect)
-	}, [emblaApi, onSelect])
+    }, [ emblaApi, onSelect ])
+    
+     const containerVariants: Variants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+      },
+    };
+    
+    const itemVariants: Variants = {
+      hidden: { opacity: 0, y: 30 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+    };
 
 	return (
 		<section className='relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden'>
@@ -55,8 +69,13 @@ export default function ContentCarouselHero({
 					/>
 				))}
 			</div>
-			<div className='relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0'>
-                <div className='text-center'>
+            <motion.div
+                 variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+                className='relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0'>
+                <motion.div variants={itemVariants} className='text-center'>
                     <p className='font-semibold text-white/80'>{eyebrow}</p>
 
                     <div className='max-w-[940px] mx-auto'>
@@ -82,12 +101,12 @@ export default function ContentCarouselHero({
                             </button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 				<div className='mt-8 -mx-4 sm:-mx-6 overflow-hidden' ref={emblaRef}>
 					{/* We render the children passed from the server here */}
-					<div className='flex'>{children}</div>
+					<motion.div variants={itemVariants} className='flex'>{children}</motion.div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	)
 }
