@@ -62,17 +62,24 @@ export default function FAQ() {
 		<section id='faq' className='bg-[#F5FCFF] py-24 sm:py-32'>
 			<div className='mx-auto max-w-3xl px-4 sm:px-6'>
 				{/* Section Header */}
-				<div className='text-center'>
-					<p className='font-semibold text-brand-teal'> FAQ </p>
-					<h2 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-						Frequently Asked Questions
-					</h2>
-					<p className='mt-6 text-lg leading-8 text-gray-600'>
-						Got questions ? We&apos;ve got answers. Here&apos;s everything you
-						need to know about how Qualiview Lab blends AI and human expertise
-						to deliver world - class software testing.
-					</p>
-				</div>
+				<motion.div
+					variants={containerVariants}
+					initial='hidden'
+					whileInView='visible'
+					viewport={{ once: true, amount: 0.2 }}
+					className='text-center'>
+					<motion.div variants={itemVariants}>
+						<p className='font-medium text-[##8E92A2]'> FAQ </p>
+						<h2 className='mt-4 md:mt-6 text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl'>
+							Frequently Asked Questions
+						</h2>
+						<p className='mt-6 md:mt-8 text-lg leading-8 text-gray-600'>
+							Got questions ? We&apos;ve got answers. Here&apos;s everything you
+							need to know about how Qualiview Lab blends AI and human expertise
+							to deliver world - class software testing.
+						</p>
+					</motion.div>
+				</motion.div>
 
 				{/* Accordion List */}
 				<motion.div

@@ -15,7 +15,7 @@ export default function CTA() {
         ))}
       </div>
 
-      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
+      <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
         <div className="flex flex-col items-start justify-between">
           {/* Left Column: Text Content and Button */}
           <motion.div
@@ -25,10 +25,10 @@ export default function CTA() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="flex-1 flex flex-col gap-6"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+            <h2 className="text-4xl sm:text-4xl font-semibold max-w-[476px] tracking-tight leading-13 text-white">
               Ready to Ship Bug-Free Software, Faster?
             </h2>
-            <p className="text-lg text-white/90 leading-relaxed">
+            <p className="text-lg text-white/90 max-w-[376px] leading-relaxed">
               AI does the heavy lifting. Experts make it bulletproof.
             </p>
             <div className="mt-4">
