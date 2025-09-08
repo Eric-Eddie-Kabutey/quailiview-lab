@@ -10,16 +10,16 @@ import footerLogoBg from '/public/images/footer-logo-bg.png';
 
 const footerLinks = {
   company: [
-    { name: 'About Us', href: '#' },
-    { name: 'How It Works', href: '#' },
-    { name: 'Solutions', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Events', href: '#' },
-    { name: 'Case Studies', href: '#' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'How It Works', href: '/#how-it-works' },
+    { name: 'Solutions', href: '/#solutions' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Events', href: '/events' },
+    { name: 'Case Studies', href: '/case-studies' },
   ],
   resources: [
-    { name: 'FAQs', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'FAQs', href: '/#faq' },
+    { name: 'Contact Us', href: '/contact-us' },
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms of Service', href: '#' },
     { name: 'Security & Compliance', href: '#' },

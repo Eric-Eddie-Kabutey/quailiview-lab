@@ -86,7 +86,7 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 							<FormItem>
 								<FormLabel className='text-black font-semibold'>Full Name</FormLabel>
 								<FormControl>
-									<Input placeholder='Enter your name' {...field} className='border border-gray-400 focus:border-[#03444A]' />
+									<Input placeholder='Enter your name' {...field} className='border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'/>
 								</FormControl>
 								<FormMessage className='text-red-500' />
 							</FormItem>
@@ -99,7 +99,7 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 							<FormItem>
 								<FormLabel className='text-black font-semibold'>Email Address</FormLabel>
 								<FormControl>
-									<Input placeholder='Enter your email address' {...field} className='border border-gray-400' />
+									<Input placeholder='Enter your email address' {...field} className='border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]' />
 								</FormControl>
 								<FormMessage className='text-red-500' />
 							</FormItem>
@@ -112,7 +112,7 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 							<FormItem>
 								<FormLabel className='text-black font-semibold'>Company / Organization</FormLabel>
 								<FormControl>
-									<Input placeholder='Enter your company name' {...field} className='border border-gray-400' />
+									<Input placeholder='Enter your company name' {...field} className='border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]' />
 								</FormControl>
 								<FormMessage className='text-red-500' />
 							</FormItem>
@@ -132,7 +132,7 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 									placeholder="Enter phone number"
 									value={field.value}
 									onChange={field.onChange}
-									className="w-full text-black font-medium border border-gray-400 rounded-md pl-3" 
+									className="w-full rounded-md pl-3 border border-gray-400 text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]" 
         						/>
 								</FormControl>
 
@@ -150,11 +150,11 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 									onValueChange={field.onChange}
 									defaultValue={field.value}>
 									<FormControl className='w-full'>
-										<SelectTrigger>
+										<SelectTrigger className='border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'>
 											<SelectValue placeholder='Select an inquiry type' />
 										</SelectTrigger>
 									</FormControl>
-									<SelectContent className='bg-[#fff] border border-gray-400'>
+									<SelectContent className='bg-[#fff] border border-gray-400 text-gray-700'>
 										<SelectItem value='Project Inquiry' className='text-gray-900'>
 											Project Inquiry
 										</SelectItem>
@@ -176,7 +176,7 @@ function ContactForm({ onSuccess }: { onSuccess: () => void }) {
 								<FormControl>
 									<Textarea
 										placeholder='Enter your message'
-										className='resize-none text-gray-600 border border-gray-400'
+										className='resize-none border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]' 
 										{...field}
 									/>
 								</FormControl>

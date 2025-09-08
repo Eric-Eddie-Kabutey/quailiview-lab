@@ -30,7 +30,7 @@ export default function CaseStudiesHero() {
         className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0"
           >
               <div className="flex flex-col gap-6 md:gap-10">
-              <p className="text-center tracking-wider text-[#03444A]">CASE STUDIES</p>
+              <p className="text-center text-medium tracking-wider text-[#8E92A2]">CASE STUDIES</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-18 items-start">
           
           {/* Left Column: Heading */}

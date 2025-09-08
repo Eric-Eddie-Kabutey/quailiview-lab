@@ -25,6 +25,7 @@ import {
 import { navigationData } from '@/lib/data/nav'
 import { SimpleDropdownItem, ServiceColumn } from '@/lib/types/nav'
 import Image from 'next/image'
+import { NavTriggerUnderline } from '../ui/nav-trigger-underline'
 
 // Reusable component for dropdown items
 const ListItem = React.forwardRef<
@@ -36,7 +37,7 @@ const ListItem = React.forwardRef<
 			<NavigationMenuLink asChild>
 				<a
 					ref={ref}
-					className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground ${className}`}
+					className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground hover:bg-gray-200 focus:bg-accent focus:text-accent-foreground ${className}`}
 					{...props}>
 					<div className='text-sm font-medium leading-none'>{title}</div>
 					<p className='line-clamp-2 text-sm leading-snug text-muted-foreground'>
@@ -142,7 +143,7 @@ const DesktopNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => 
 			{navigationData.map((navItem) =>
 				navItem.isDropdown ? (
 					<NavigationMenuItem key={navItem.label}>
-						<NavigationMenuTrigger>{navItem.label}</NavigationMenuTrigger>
+						<NavTriggerUnderline>{navItem.label}</NavTriggerUnderline>
 						<NavigationMenuContent className='bg-[#F6FAFC] text-[#282930]'>
 							<motion.div
 								initial={{ opacity: 0, y: -10 }}
@@ -172,14 +173,15 @@ const DesktopNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => 
 												<div
 													key={column.title}
 													className='flex flex-col space-y-2'>
-													<Link href={column.href ?? ""} className='font-semibold text-sm mb-2' onClick={() => setIsOpen(false)}>
+													<Link href={column.href ?? ""} className='font-semibold text-sm mb-2 hover:underline' onClick={() => setIsOpen(false)}>
 														{column.title}
 													</Link>
 													{column.links.map((link) => (
 														<Link
 															key={link.title}
 															href={link.href}
-															className='group flex items-center gap-2 p-2 rounded-md hover:bg-accent'>
+															onClick={() => setIsOpen(false)}
+															className='group flex items-center gap-2 p-2 rounded-md hover:bg-accent hover:bg-gray-200'>
 															<link.icon className='h-4 w-4 text-muted-foreground' />
 															<span className='text-sm'>{link.title}</span>
 														</Link>
@@ -195,7 +197,9 @@ const DesktopNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => 
 				) : (
 					<NavigationMenuItem key={navItem.label}>
 						<Link href={navItem.href} legacyBehavior passHref>
-							<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+								<NavigationMenuLink
+									className={navigationMenuTriggerStyle()}
+								>
 								{navItem.label}
 							</NavigationMenuLink>
 						</Link>
