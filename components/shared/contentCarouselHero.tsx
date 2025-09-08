@@ -76,7 +76,7 @@ export default function ContentCarouselHero({
             viewport={{ once: true, amount: 0.3 }}
                 className='relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0'>
                 <motion.div variants={itemVariants} className='text-center'>
-                    <p className='font-semibold text-white/80'>{eyebrow}</p>
+                    <p className='font-medium text-[#8E92A2]'>{eyebrow}</p>
 
                     <div className='max-w-[940px] mx-auto'>
                         <h1 className='mt-6 md:mt-10 text-4xl font-bold tracking-tight leading-10 md:leading-13 sm:text-5xl'>
