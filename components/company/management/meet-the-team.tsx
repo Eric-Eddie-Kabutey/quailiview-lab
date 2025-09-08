@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 
 type TeamMember = {
@@ -17,7 +18,7 @@ type TeamMember = {
 
 const teamData: TeamMember[] = [
   // Add a placeholder member to the left for better scrolling
-  { id: 0, name: 'John Doe', title: 'QA Strategist', bio: '...', imageColor: '/assets/images/team/micheal-james-color.png', imageBw: '/assets/images/team/micheal-james-bw.png' },
+  { id: 0, name: 'John Doe', title: 'QA Strategist', bio: 'This a sample bio', imageColor: '/assets/images/team/micheal-james-color.png', imageBw: '/assets/images/team/micheal-james-bw.png' },
   {
     id: 1,
     name: 'Amara Brenda',
@@ -58,15 +59,15 @@ export default function MeetTheTeam() {
     containScroll: 'trimSnaps',
   });
 
-  // The center member is active by default
-  const [activeMember, setActiveMember] = useState(teamData[2]);
+  // The first member is active by default
+  const [activeMember, setActiveMember] = useState(teamData[0]);
 
   return (
     <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h2 className="mb-2 text-4xl font-bold tracking-tight leading-13 text-gray-900 sm:text-5xl">
             Meet the Team Behind Qualiview Lab
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -99,17 +100,22 @@ export default function MeetTheTeam() {
                       />
                     </motion.div>
                   </AnimatePresence>
+
+                  {/* dark background is add to all members expect the active member. On hover the dark background is removed from the active member */}
                   <Image
-                    src={member.imageBw}
+                    src={member.imageColor}
                     alt={member.name}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <h3 className="font-semibold">{member.name}</h3>
-                    <p className="text-sm text-white/80">{member.title}</p>
-                  </div>
+                  
+                      <div className={cn('absolute', activeMember ? '' : 'inset-0 bg-gradient-to-t from-black/60 to-transparent')}></div>
+                   
+                  <div className="hidden absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    {/* <div className="hidden absolute bottom-0 left-0 right-0 p-4 text-white">
+                      <h3 className="font-semibold">{member.name}</h3>
+                      <p className="text-sm text-white/80">{member.title}</p>
+                    </div> */}
                 </div>
               </div>
             ))}
