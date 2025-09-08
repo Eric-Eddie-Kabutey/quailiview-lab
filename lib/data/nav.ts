@@ -177,7 +177,7 @@ export const navigationData: NavItem[] = [
 				},
 				{
 					title: 'Events',
-					href: '/event',
+					href: '/events',
 					description: 'Upcoming conferences, workshops, and networking.',
 					icon: Calendar,
 				},
