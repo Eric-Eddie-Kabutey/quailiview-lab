@@ -40,7 +40,7 @@ const itemVariants: Variants = {
 
 export default function HowItWorks() {
   return (
-    <section className="relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden">
+    <section id='how-it-works' className="relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden">
       {/* Re-using the dotted background, now with a darker color */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (

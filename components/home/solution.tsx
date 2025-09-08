@@ -54,7 +54,7 @@ const SolutionCard = ({
 
 export default function SolutionsSection() {
   return (
-    <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
+    <section id='solutions' className="relative bg-white py-24 sm:py-32 overflow-hidden">
       {/* Dotted background */}
       <div className="absolute inset-0 flex justify-around opacity-75">
         {[...Array(6)].map((_, i) => (
