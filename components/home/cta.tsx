@@ -16,7 +16,7 @@ export default function CTA() {
       </div>
 
       <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
-        <div className="flex flex-col items-start justify-between">
+        <div className="relative z-10 flex flex-col items-start justify-between">
           {/* Left Column: Text Content and Button */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -62,7 +62,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="hidden md:block absolute top-0 right-0 bottom-0 w-full h-80 sm:h-96 lg:h-full overflow-hidden"
+            className="hidden md:block absolute top-0 -right-10 xl:right-0 bottom-0 w-full h-80 sm:h-96 lg:h-full overflow-hidden"
           >
             <Image
               src="/assets/images/earth-europe.png"
