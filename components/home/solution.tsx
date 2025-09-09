@@ -40,7 +40,7 @@ const SolutionCard = ({
         <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
       </div>
       {/* Visual Part (Right) */}
-      <div className={`1/2 md:w-2/5 p-6 flex items-center justify-center ${visualBgColor}`}>
+      <div className={`1/2 md:w-2/5 p-6 ${visualBgColor}`}>
         {visual}
       </div>
     </div>
@@ -97,10 +97,10 @@ export default function SolutionsSection() {
               visualBgColor="bg-[#f9f2e7]"
               animationDelay={0.2}
               visual={
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4 h-full">
                   {techIcons.map((Item, index) => (
                     <div key={index} className="bg-white p-4 rounded-full shadow-sm flex justify-center items-center">
-                      <Item.icon className="w-8 h-8 text-[#d97706]" />
+                      <Item.icon className="w-6 h-auto text-[#d97706]" />
                     </div>
                   ))}
                 </div>
