@@ -88,47 +88,51 @@ export default function PaginatedPostGrid({
 			<BackgroundEffect lineColor='gray-200' />
 
 			<div className='relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0'>
-				<div className='grid grid-cols-1 md:grid-cols-2 md:items-center justify-between'>
-					<h2 className='text-3xl font-bold tracking-tight text-gray-900 mb-12'>
+				<div className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between mb-12'>
+					<h2 className='text-3xl font-bold tracking-tight text-gray-900'>
 						{title}
 					</h2>
 
-					{/* Desktop Filter Bar */}
-					<div className='grid grid-cols-1 md:grid-cols-3 gap-2 mb-12 overflow-hidden'>
-						<div className='relative p-1'>
-							<Search className='absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-600' />
+					{/* Filter controls container */}
+					<div className='filter-bar-theme flex flex-col sm:flex-row gap-4 w-full lg:w-auto'>
+						<div className='relative w-full lg:w-64'>
+							<Search className='absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-700' />
 							<Input
 								type='search'
 								placeholder='Search...'
-								className='pl-10 border border-gray-400 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'
+								className='pl-10 text-gray-600 shadow-none placeholder:text-gray-400 focus:border-[#03444A] focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'
 								value={searchTerm}
 								onChange={(e) => {
 									setSearchTerm(e.target.value)
-									setCurrentPage(1) // Reset to first page on search
+									setCurrentPage(1)
 								}}
 							/>
 						</div>
 
-						<div className='p-1'>
+						{/* Desktop filters */}
+						<div className='hidden md:block w-full lg:w-48'>
 							<Select value={sortOption} onValueChange={setSortOption}>
-								<SelectTrigger className='text-gray-600'>
-									<SelectValue className='text[#034440]' />
+								<SelectTrigger className='border border-gray-400 focus:border-2 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'>
+									<SelectValue />
 								</SelectTrigger>
-								<SelectContent className='text-gray-600 bg-[#FAFFFF] border border-1[#03444A]'>
+								<SelectContent className='bg-[#fff] border border-gray-400 text-gray-700'>
 									<SelectItem value='recent'>Most Recent</SelectItem>
 									<SelectItem value='oldest'>Oldest</SelectItem>
 								</SelectContent>
 							</Select>
 						</div>
 
-						<div className='p-1 w-full'>
+						<div className='hidden md:block w-full lg:w-48'>
 							<Select
 								value={selectedCategory}
-								onValueChange={setSelectedCategory}>
-								<SelectTrigger className='text-gray-600'>
+								onValueChange={(value) => {
+									setSelectedCategory(value)
+									setCurrentPage(1)
+								}}>
+								<SelectTrigger className='border border-gray-400 focus:border-2 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'>
 									<SelectValue />
 								</SelectTrigger>
-								<SelectContent className='text-gray-600 bg-[#FAFFFF] border border-1[#03444A]'>
+								<SelectContent className='bg-[#fff] border border-gray-400 text-gray-700'>
 									{categories.map((cat) => (
 										<SelectItem key={cat} value={cat}>
 											{cat}
@@ -137,39 +141,37 @@ export default function PaginatedPostGrid({
 								</SelectContent>
 							</Select>
 						</div>
-					</div>
-					{/* Filters for mobile */}
-					<div className='flex justify-between md:hidden'>
-						<Select value={sortOption} onValueChange={setSortOption}>
-							<SelectTrigger className='text-gray-600'>
-								<SelectValue className='text-gray-600' />
-							</SelectTrigger>
-							<SelectContent className='text-gray-600 border border-gray-400 bg-[#FAFFFF]'>
-								<SelectItem value='recent' className='text-gray-600'>
-									Most Recent
-								</SelectItem>
-								<SelectItem value='oldest' className='text-gray-600'>
-									Oldest
-								</SelectItem>
-							</SelectContent>
-						</Select>
-						<Select
-							value={selectedCategory}
-							onValueChange={(value) => {
-								setSelectedCategory(value)
-								setCurrentPage(1) // Reset to first page on filter
-							}}>
-							<SelectTrigger className='text-gray-600'>
-								<SelectValue />
-							</SelectTrigger>
-							<SelectContent className='text-gray-600 bg-[#FAFFFF]'>
-								{categories.map((cat) => (
-									<SelectItem key={cat} value={cat}>
-										{cat}
-									</SelectItem>
-								))}
-							</SelectContent>
-						</Select>
+
+						{/* mobile filters */}
+						<div className='flex items-center justify-between md:hidden'>
+							<Select value={sortOption} onValueChange={setSortOption}>
+								<SelectTrigger className='border border-gray-400 focus:border-2 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'>
+									<SelectValue />
+								</SelectTrigger>
+								<SelectContent className='bg-[#fff] border border-gray-400 text-gray-700'>
+									<SelectItem value='recent'>Most Recent</SelectItem>
+									<SelectItem value='oldest'>Oldest</SelectItem>
+								</SelectContent>
+							</Select>
+
+							<Select
+								value={selectedCategory}
+								onValueChange={(value) => {
+									setSelectedCategory(value)
+									setCurrentPage(1)
+								}}>
+								<SelectTrigger className='border border-gray-400 focus:border-2 focus:border-[#03444A] text-gray-700 shadow-none placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-offset-[#03444A]'>
+									<SelectValue />
+								</SelectTrigger>
+								<SelectContent className='bg-[#fff] border border-gray-400 text-gray-700'>
+									{categories.map((cat) => (
+										<SelectItem key={cat} value={cat}>
+											{cat}
+										</SelectItem>
+									))}
+								</SelectContent>
+							</Select>
+						</div>
 					</div>
 				</div>
 
@@ -224,7 +226,7 @@ export default function PaginatedPostGrid({
 									className={
 										currentPage === i + 1
 											? 'bg-[#03444A] text-[#FAFFFF]'
-											: 'bg-[#FAFFFF]'
+											: 'bg-[#FAFFFF] text-black'
 									}>
 									{i + 1}
 								</Button>
