@@ -103,7 +103,7 @@ export default function Header() {
 								<div className='flex flex-col space-y-2'>
 									<Link
 										href='#'
-										className='w-full text-center py-2 border rounded-md'>
+										className='w-full text-black text-center py-2 border rounded-md'>
 										Sign In
 									</Link>
 									<Link
@@ -121,7 +121,7 @@ export default function Header() {
 					{/* action buttons */}
 					<div className='hidden lg:flex items-center justify-end space-x-4'>
 						<nav className='flex items-center space-x-2'>
-							<Link href='#' className='py-2 px-4 border rounded-md text-sm'>
+							<Link href='#' className='py-2 px-4 border rounded-md text-sm text-black'>
 								Sign In
 							</Link>
 							<Link
