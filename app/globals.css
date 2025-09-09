@@ -91,3 +91,30 @@ body {
 .PhoneInputCountrySelect {
   font-size: 1.5rem;
 }
+
+
+/* Custom Scoped Theme for the Filter Bar */
+.filter-bar-theme {
+  /* 
+    We are overriding the default Shadcn CSS variables ONLY within this scope.
+    These HSL values correspond to Tailwind's light gray colors.
+  */
+  --border: 220 13% 91%;      /* Approx. slate-200 for the default border */
+  --input: 220 13% 91%;       /* Also for the default border */
+  --ring: 220 14% 61%;        /* Approx. slate-400 for the focus ring/border */
+  --radius: 0.5rem;           /* rounded-lg, matching the design's softer corners */
+}
+
+/* Specific overrides for a cleaner look */
+.filter-bar-theme .SelectTrigger,
+.filter-bar-theme .Input {
+  box-shadow: none; /* Remove default Shadcn inner shadow for a flatter look */
+  background-color: hsl(var(--card)); /* Ensure a solid white background */
+}
+
+/* Style for the dropdown menu itself */
+.filter-bar-theme .SelectContent {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--card));
+}
