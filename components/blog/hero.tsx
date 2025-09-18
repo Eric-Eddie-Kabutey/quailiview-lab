@@ -1,7 +1,7 @@
 import HeroCarousel from '../shared/hero-carousel';
-import { getLatestPosts } from '@/data/mock-posts';
+import { getLatestPosts } from '@/lib/content';
 import BlogHeroCard from '@/components/blog/blog-hero-card';
-import { Post } from '@/lib/types/post';
+import { Post } from '@/types';
 
 export default function BlogHero() {
   const latestPosts = getLatestPosts();

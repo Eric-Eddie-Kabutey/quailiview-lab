@@ -1,9 +1,9 @@
 import ContentCarouselHero from '@/components/shared/contentCarouselHero';
-import { getLatestPosts } from '@/data/mock-posts';
+import { getLatestPosts } from '@/lib/content';
 import BlogHeroCard from '@/components/blog/blog-hero-card';
 
 export default function BlogHero() {
-  const latestPosts = getLatestPosts(); 
+  const latestPosts = getLatestPosts({ monthsAgo: 2 });
 
   return (
     <ContentCarouselHero
