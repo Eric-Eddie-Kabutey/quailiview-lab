@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Post } from '@/lib/types/post';
+import { Post } from '@/types/index';
 import { format } from 'date-fns';
 
 export default function BlogHeroCard({ post }: { post: Post }) {
   return (
     <div className="flex flex-col h-full bg-[#FFFFFF] p-2 backdrop-blur-sm rounded-2xl border border-white/10 shadow-lg overflow-hidden">
       <div className="relative aspect-[16/10] w-full">
-        <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+        <Image src={post.featureImage || '/assets/images/default-cover.png'} alt={post.title} fill className="object-cover" />
         <div className="absolute bottom-4 left-4">
           <span className="bg-[#FFFFFF] backdrop-blur-md text-black rounded-md px-2 py-1 text-xs font-semibold">{post.category}</span>
         </div>
