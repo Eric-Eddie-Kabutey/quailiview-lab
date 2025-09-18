@@ -1,17 +1,35 @@
 import Image from 'next/image';
-import { Post } from '@/types';
+import { Post, ContentType } from '@/types';
+import { getRelatedContent } from '@/lib/content';
 import { format } from 'date-fns';
+import PostCard from '../shared/post-card';
 
-export default function PostLayout({ post, children }: { post: Post, children: React.ReactNode }) {
+interface PostLayoutProps {
+  post: Post;
+  content: React.ReactNode;
+  contentType: ContentType; // We need to know if this is a 'blog' or 'case-study'
+}
+
+
+export default async function PostLayout({ post, content, contentType }: PostLayoutProps) {  
+   // Fetch related content directly within the layout component
+  const relatedPosts = getRelatedContent<Post>({
+    contentType,
+    category: post.category,
+    currentSlug: post.slug,
+    limit: 3,
+  });
+  
   return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="bg-white text-black py-6 sm:py-8">
       <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
         {/* ... dotted background ... */}
-        <article className="mx-auto max-w-3xl">
-          <header className="text-center">
+        <article className="mx-auto max-w-4xl">
+          <header className="text-start flex flex-col gap-4 mb-6">
             {/* ... header content ... */}
-            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{post.title}</h1>
-            <div className="mt-6 flex items-center justify-center gap-x-4 text-sm text-gray-500">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{post.title}</h1>
+            <p className='text-sm text-gray-500 tracking-wide'>Category: { post.category }</p>
+            <div className="flex items-center justify-start gap-x-4 text-sm text-gray-500">
               <span>By {post.author}</span>
               <span className="w-1 h-1 rounded-full bg-gray-300" />
               <span>{format(new Date(post.publishedDate), 'MMMM d, yyyy')}</span>
@@ -20,15 +38,32 @@ export default function PostLayout({ post, children }: { post: Post, children: R
             </div>
           </header>
 
-          <div className="relative my-12 aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-lg">
-            <Image src={post.coverImage} alt={`Cover image for ${post.title}`} fill className="object-cover" placeholder="blur" priority />
-          </div>
+          {/* The sample post shows post with only inner picture */}
+          {post.coverImage && (<div className="relative my-12 aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-lg">
+            <Image src={post.coverImage} alt={`Cover image for ${post.title}`} fill className="object-cover" priority />
+          </div>)}
 
           {/* The rendered MDX content will be passed in here */}
-          <div>{children}</div>
+          <div className="prose">{content}</div>
 
         </article>
+        
+      {/* Conditionally render the "Related Posts" section */}
+      {relatedPosts.length > 0 && (
+          <div className="mx-auto max-w-4xl py-24 sm:py-32">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 mb-12">
+              {contentType === 'blog' ? 'Other Blogs' : 'Related Case Studies'}
+            </h2>
+            {/* 4. Use the existing PostCard component */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedPosts.map((relatedPost) => (
+                <PostCard key={relatedPost.slug} post={relatedPost} />
+              ))}
+            </div>
+          </div>      
+      )}
       </div>
+
     </div>
   );
 }
