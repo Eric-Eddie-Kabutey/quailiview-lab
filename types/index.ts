@@ -1,14 +1,18 @@
 import { StaticImageData } from 'next/image';
 
+export type ContentType = 'blog' | 'case-studies' | 'events';
+
 export interface Post {
     slug: string;
     title: string;
     category: string;
+    type: 'blog' | 'case-studies' | 'events'; // to differentiate between post types
     author: string;
     publishedDate: string; // CRITICAL: This must be a string for serialization
     readingTime: number;
     summary: string;
-    coverImage: string | StaticImageData;
+    featureImage: string | StaticImageData;// image to display on the card
+    coverImage: string | StaticImageData; // image to display at the top of the blog post
     content?: React.ReactNode;
 }
 
