@@ -70,7 +70,7 @@ export default function Header() {
 					</nav>
 
 				{/* Mobile Menu */}
-				<div className='flex flex-1 items-center justify-between space-x-2 lg:hidden px-6'>
+				<div className='flex flex-1 items-center justify-between space-x-2 lg:hidden px-6 bg-white dark:bg-white'>
 					<Link href='/' className='font-bold'>
 						<Image
 							src='/assets/logo/logo-colored.png'
@@ -119,7 +119,7 @@ export default function Header() {
                 
 				
 					{/* action buttons */}
-					<div className='hidden lg:flex items-center justify-end space-x-4'>
+					<div className='hidden lg:flex items-center justify-end space-x-4 bg-white dark:bg-white'>
 						<nav className='flex items-center space-x-2'>
 							<Link href='#' className='py-2 px-4 border rounded-md text-sm text-black'>
 								Sign In
@@ -226,7 +226,7 @@ const MobileNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => (
 									<Link
 										key={item.title}
 										href={item.href}
-										className='flex items-center gap-2 py-2 text-base'
+										className='flex items-center gap-2 py-2 text-base text-gray-900'
 										onClick={() => setIsOpen(false)}>
 										<item.icon className='h-4 w-4' /> {item.title}
 									</Link>
@@ -240,7 +240,7 @@ const MobileNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => (
 										value={`sub-item-${colIndex}`}
 										key={column.title}>
 										<AccordionTrigger className='text-sm font-semibold'>
-											<Link href={column.href ?? ""} className='font-semibold text-sm' onClick={() => setIsOpen(false)}>
+											<Link href={column.href ?? ""} className='font-semibold text-gray-900 text-sm' onClick={() => setIsOpen(false)}>
 														{column.title}
 													</Link>											
 										</AccordionTrigger>
@@ -268,7 +268,7 @@ const MobileNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => (
 				<Link
 					key={navItem.label}
 					href={navItem.href}
-					className='flex w-full items-center py-2 text-base font-semibold'
+					className='flex w-full items-center py-2 text-gray-900 text-base font-semibold'
 					onClick={() => setIsOpen(false)}>
 					{navItem.label}
 				</Link>
