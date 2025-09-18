@@ -6,9 +6,9 @@ interface BackgroundEffectProp {
 
 export default function BackgroundEffect({ lineColor}: BackgroundEffectProp) {
     return (
-        <div className="absolute inset-0 -z-0 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-4">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className={cn("w-3px border-r border-dashed", `border-${lineColor}`)}></div>
+       <div className="absolute z-0 inset-0 flex justify-around opacity-30 pointer-events-none">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className={cn("w-px border-r border-dashed ", lineColor.length > 1 ? `border-${lineColor}` : 'border-gray-500')} />
         ))}
       </div>
     )

@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button'
 import { Search } from 'lucide-react'
 import Image from 'next/image'
 import BackgroundEffect from './shared/background-effect'
+import { cn } from '@/lib/utils'
 
 // Props for our reusable component
 interface PaginatedPostGridProps {
@@ -204,7 +205,8 @@ export default function PaginatedPostGrid({
 						<Button
 							variant='ghost'
 							onClick={() => handlePageChange(currentPage - 1)}
-							disabled={currentPage === 1}>
+							disabled={currentPage === 1}
+						className={cn(currentPage === 1 ? 'text-gray-500' : 'text-[#03444A]')}>
 							<Image
 								src='/assets/icons/prev-btn.png'
 								alt='previous icon'
@@ -233,7 +235,8 @@ export default function PaginatedPostGrid({
 						<Button
 							variant='ghost'
 							onClick={() => handlePageChange(currentPage + 1)}
-							disabled={currentPage === totalPages}>
+							disabled={currentPage === totalPages}
+							className={cn(currentPage === totalPages ? 'text-gray-500' : 'text-[#03444A]')}>
 							Next{' '}
 							<Image
 								src='/assets/icons/next-btn.png'

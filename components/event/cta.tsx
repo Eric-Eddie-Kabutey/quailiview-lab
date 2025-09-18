@@ -4,17 +4,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import NewsletterSubscribe from './news-letter-subcribe';
+import BackgroundEffect from '../shared/background-effect';
 
 
 export default function CTA() {
   return (
     <section className="md:relative bg-[#CA6E1D] text-white py-24 sm:py-24 overflow-hidden">
       {/* Background with subtle vertical lines (optional, but matches other sections) */}
-      <div className="absolute inset-0 flex justify-around opacity-30">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px border-r border-dashed border-gray-500" style={{ backgroundSize: '1px 8px' }} />
-        ))}
-      </div>
+     <BackgroundEffect lineColor='gray-400' />
 
       <div className="mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">
         <div className="relative z-10 flex flex-col items-start justify-between">

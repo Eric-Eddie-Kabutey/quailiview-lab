@@ -3,17 +3,14 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock } from 'lucide-react';
 import Image from 'next/image';
+import BackgroundEffect from '../shared/background-effect';
 
 export default function HeroSection() {
   return (
     // Section takes up at least the full viewport height and centers content vertically
     <section className="relative min-h-screen pt-6 flex items-center bg-white">
-      {/* Faint vertical grid lines for background effect */}
-      <div className="absolute inset-0 grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-4">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="w-px border-r border-dashed border-gray-200"></div>
-        ))}
-      </div>
+      {/* Faint vertical grid lines for background effect */}      
+      <BackgroundEffect lineColor='gray-400' />
 
       {/* Main content container */}
       <div className="relative mx-auto w-full lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0">

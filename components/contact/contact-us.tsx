@@ -248,7 +248,7 @@ export default function ContactUs() {
 					/>
 				))}
 			</div> */}
-			<BackgroundEffect lineColor='gray-200' />
+			<BackgroundEffect lineColor='gray-400' />
 
 			<div className='relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
