@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, Variants } from '@/components/module/framer-motion';
+import BackgroundEffect from '@/components/shared/background-effect';
 
 const statements = [
   {
@@ -30,11 +31,12 @@ export default function MissionVision() {
   return (
     <section className="relative bg-white py-24 sm:py-32">
       {/* Consistent dotted background */}
-      <div className="absolute inset-0 flex justify-around opacity-75 pointer-events-none">
+      {/* <div className="absolute inset-0 flex justify-around opacity-75 pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
         ))}
-      </div>
+      </div> */}
+      <BackgroundEffect lineColor='gray-400' />
 
       <motion.div
         variants={containerVariants}
@@ -44,7 +46,7 @@ export default function MissionVision() {
         className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-0"
       >
         {/* Top horizontal divider */}
-        <div className="border-t border-gray-200" />
+        <div className="border-t border-gray-300" />
 
         {/* Content Area */}
         <div className="flex flex-col gap-16 md:gap-24 py-16 md:py-24">
@@ -71,7 +73,7 @@ export default function MissionVision() {
         </div>
 
         {/* Bottom horizontal divider */}
-        <div className="border-t border-gray-200" />
+        <div className="border-t border-gray-300" />
       </motion.div>
     </section>
   );

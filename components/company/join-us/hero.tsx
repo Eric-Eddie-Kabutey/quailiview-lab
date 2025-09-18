@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, Variants } from '@/components/module/framer-motion';
+import BackgroundEffect from '@/components/shared/background-effect';
 import Link from 'next/link';
 
 // Animation variants for a staggered entrance
@@ -21,11 +22,7 @@ export default function JoinUsHero() {
   return (
     <section className="relative bg-white py-24 sm:py-32">
       {/* Consistent dotted background */}
-      <div className="absolute inset-0 flex justify-around opacity-75 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
-        ))}
-      </div>
+      <BackgroundEffect lineColor='gray-400' />
 
       <motion.div
         variants={containerVariants}

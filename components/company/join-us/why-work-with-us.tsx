@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, Variants } from '@/components/module/framer-motion';
+import BackgroundEffect from '@/components/shared/background-effect';
 import { Lightbulb, BrainCircuit, Rocket } from 'lucide-react';
 
 // Data for the benefits section, making it easy to edit
@@ -39,12 +40,8 @@ const itemVariants: Variants = {
 export default function WhyWorkWithUs() {
   return (
     <section className="relative bg-[#CA6E1D] text-white py-24 sm:py-32">
-      {/* Dotted background with a lighter color for visibility */}
-      <div className="absolute inset-0 flex justify-around opacity-20 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px border-r border-dashed border-white" />
-        ))}
-      </div>
+      {/* Dotted background with a lighter color for visibility */}      
+      <BackgroundEffect lineColor='gray-400' />
 
       <motion.div
         variants={containerVariants}

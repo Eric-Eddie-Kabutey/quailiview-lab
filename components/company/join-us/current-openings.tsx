@@ -3,6 +3,7 @@
 import { motion, Variants } from '@/components/module/framer-motion';
 import Link from 'next/link';
 import { MapPin, CalendarDays, Banknote, Globe, Mail } from 'lucide-react';
+import BackgroundEffect from '@/components/shared/background-effect';
 
 // Define styles for different job tags for easy reuse
 const tagStyles: { [key: string]: string } = {
@@ -70,11 +71,8 @@ export default function CurrentOpenings() {
     <section className="relative bg-[#fff] py-24 sm:py-32">
 
       {/* Dotted background with a lighter color for visibility */}
-      <div className="absolute inset-0 flex justify-around opacity-20 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px border-r border-dashed border-gray-400" />
-        ))}
-      </div>
+      <BackgroundEffect lineColor='gray-400' />
+
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         {/* Section Header */}
         <motion.div

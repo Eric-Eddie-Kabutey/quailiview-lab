@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="md:relative bg-[#03444A] text-white py-24 sm:py-24 overflow-hidden">
+    <section className="relative bg-[#03444A] text-white py-24 sm:py-24 overflow-hidden">
       {/* Background with subtle vertical lines (optional, but matches other sections) */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
