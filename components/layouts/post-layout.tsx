@@ -27,9 +27,9 @@ export default async function PostLayout({ post, content, contentType }: PostLay
         <BackgroundEffect lineColor='gray-200' />
       <div className="relative z-20 mx-auto lg:max-w-5xl xl:max-w-7xl">
         <article className="mx-auto max-w-4xl px-4  py-6 sm:py-8">
-          <header className="text-start flex flex-col gap-2 mb-6">
+          <header className="text-start flex flex-col gap-2 md:gap-4 mb-6">
             {/* ... header content ... */}
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:tracking-wide leading-10">{post.title}</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:tracking-wide leading-10 md:leading-13">{post.title}</h1>
             <p className='text-sm text-gray-500 tracking-wide'>Category: { post.category }</p>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-y-2 gap-x-4 text-sm text-gray-500">
               <span>By {post.author}</span>
