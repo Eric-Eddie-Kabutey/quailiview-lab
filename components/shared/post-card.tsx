@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, Variants } from '@/components/module/framer-motion';
@@ -9,8 +10,8 @@ const itemVariants: Variants = {
 };
 
 export default function PostCard({ post }: { post: Post }) {
-  // Determine the correct path based on category or a future 'type' property
-  const postUrl = `/blog/${post.slug}`; // This can be adapted for case studies later
+  // Dynamically construct the post URL based on its type and slug
+  const postUrl = `/${post.type}/${post.slug}`; 
 
   return (
     <motion.div variants={itemVariants} className="h-full">
@@ -21,7 +22,7 @@ export default function PostCard({ post }: { post: Post }) {
           <div className="relative">
             <div className="aspect-[16/10] w-full">
               <Image
-                src={post.coverImage}
+                src={post.featureImage || '/assets/images/default-cover.png'}
                 alt={`Cover image for ${post.title}`}
                 fill
                 className="object-cover"

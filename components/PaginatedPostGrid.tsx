@@ -20,16 +20,14 @@ import BackgroundEffect from './shared/background-effect'
 // Props for our reusable component
 interface PaginatedPostGridProps {
 	title: string
-	initialPosts: Post[]
-	postType: 'blog' | 'case-study'
+	initialPosts: Post[]	
 }
 
 const POSTS_PER_PAGE = 6
 
 export default function PaginatedPostGrid({
 	title,
-	initialPosts,
-	postType,
+	initialPosts,	
 }: PaginatedPostGridProps) {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [sortOption, setSortOption] = useState('recent')
