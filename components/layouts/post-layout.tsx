@@ -3,6 +3,7 @@ import { Post, ContentType } from '@/types';
 import { getRelatedContent } from '@/lib/content';
 import { format } from 'date-fns';
 import PostCard from '../shared/post-card';
+import BackgroundEffect from '../shared/background-effect';
 
 interface PostLayoutProps {
   post: Post;
@@ -21,10 +22,11 @@ export default async function PostLayout({ post, content, contentType }: PostLay
   });
   
   return (
-    <div className="bg-white text-black py-6 sm:py-8">
-      <div className="relative mx-auto lg:max-w-5xl xl:max-w-7xl px-4 sm:px-6">
+    <div className="relative bg-white text-black">
         {/* ... dotted background ... */}
-        <article className="mx-auto max-w-4xl">
+        <BackgroundEffect lineColor='gray-200' />
+      <div className="relative z-20 mx-auto lg:max-w-5xl xl:max-w-7xl">
+        <article className="mx-auto max-w-4xl px-4  py-6 sm:py-8">
           <header className="text-start flex flex-col gap-4 mb-6">
             {/* ... header content ... */}
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{post.title}</h1>
