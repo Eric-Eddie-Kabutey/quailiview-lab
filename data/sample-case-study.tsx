@@ -1,11 +1,11 @@
 import { Post } from '@/lib/types/post';
-import coverImage from '../public/assets/images/blog/ai-testing-cover.png'; 
+import coverImage from '../public/assets/images/case-studies/case-study-cover.png'; 
 
-export const samplePost: Post = {
+export const sampleCaseStudy: Post = {
   slug: 'how-ai-is-transforming-software-testing-in-2025',
   title: 'How AI is Transforming Software Testing in 2025',
-  type: '',
   category: 'AI & Emerging Tech Assurance',
+  type: 'case-studies',
   author: 'Qualiview Lab Team',
   publishedDate: 'August 23, 2025',
   readingTime: 5,
