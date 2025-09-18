@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useSpring, useTransform } from 'framer-motion';
+import BackgroundEffect from '../shared/background-effect';
 
 // Define the bands for the background. This makes it easy to adjust.
 // The widths are percentages, and the colors are taken from your design.
@@ -48,11 +49,7 @@ export default function Stats() {
   return (
     <section ref={ref} className="relative w-full py-24 sm:py-32 overflow-hidden">
       {/* Background with colored bands */}
-      <div className="absolute inset-0 flex w-full h-full">
-        {bands.map((band, index) => (
-          <div key={index} className={`${band.width} ${band.color} h-full`} />
-        ))}
-      </div>
+      <BackgroundEffect lineColor='gray-400' />
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-center text-center text-white px-4">

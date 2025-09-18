@@ -5,6 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
 import { ArrowUp, ArrowDown } from 'lucide-react';
+import BackgroundEffect from '../shared/background-effect';
 
 
 // Define a type for our testimonial data
@@ -60,12 +61,8 @@ export default function Testimonials() {
 
   return (
     <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
-      <div className="absolute inset-0 flex justify-around opacity-75">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
-        ))}
-      </div>
-
+      {/* faint decorated background */}
+      <BackgroundEffect lineColor='gray-400' />
       <div className="relative mx-auto lg:max-w-4xl xl:max-w-5xl px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-medium text-[##8E92A2]">WE LOVE DEVELOPERS</p>
