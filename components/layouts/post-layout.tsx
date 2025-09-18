@@ -27,16 +27,19 @@ export default async function PostLayout({ post, content, contentType }: PostLay
         <BackgroundEffect lineColor='gray-200' />
       <div className="relative z-20 mx-auto lg:max-w-5xl xl:max-w-7xl">
         <article className="mx-auto max-w-4xl px-4  py-6 sm:py-8">
-          <header className="text-start flex flex-col gap-4 mb-6">
+          <header className="text-start flex flex-col gap-2 mb-6">
             {/* ... header content ... */}
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{post.title}</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:tracking-wide leading-10">{post.title}</h1>
             <p className='text-sm text-gray-500 tracking-wide'>Category: { post.category }</p>
-            <div className="flex items-center justify-start gap-x-4 text-sm text-gray-500">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-y-2 gap-x-4 text-sm text-gray-500">
               <span>By {post.author}</span>
-              <span className="w-1 h-1 rounded-full bg-gray-300" />
-              <span>{format(new Date(post.publishedDate), 'MMMM d, yyyy')}</span>
-              <span className="w-1 h-1 rounded-full bg-gray-300" />
-              <span>{post.readingTime} min read</span>
+              <span className="hidden md:block w-1 h-1 rounded-full bg-gray-300" />
+              <div className='flex items-center gap-x-2'>
+                <span>{format(new Date(post.publishedDate), 'MMMM d, yyyy')}</span>
+                <span className="w-1 h-1 rounded-full bg-gray-300" />
+                <span>{post.readingTime} min read</span>
+
+              </div>
             </div>
           </header>
 
