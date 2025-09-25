@@ -102,12 +102,12 @@ export default function Header() {
 							<div className='mt-auto pt-6'>
 								<div className='flex flex-col space-y-2'>
 									<Link
-										href='#'
+										href='/sign-in'
 										className='w-full text-black text-center py-2 border rounded-md'>
 										Sign In
 									</Link>
 									<Link
-										href='#'
+										href='sign-up'
 										className='w-full text-center py-2 bg-[#03444A] text-white rounded-md'>
 										Get Started
 									</Link>
@@ -121,11 +121,11 @@ export default function Header() {
 					{/* action buttons */}
 					<div className='hidden lg:flex items-center justify-end space-x-4 bg-white dark:bg-white'>
 						<nav className='flex items-center space-x-2'>
-							<Link href='#' className='py-2 px-4 border rounded-md text-sm text-black'>
+							<Link href='/sign-in' className='py-2 px-4 border rounded-md text-sm text-black'>
 								Sign In
 							</Link>
 							<Link
-								href='#'
+								href='/sign-up'
 								className='py-2 px-4 bg-[#03444A] text-white rounded-md text-sm'>
 								Get Started
 							</Link>
