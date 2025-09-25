@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { SignInForm } from '@/components/main/sign-in/sign-in-form'; // We will create this next
+import BackgroundEffect from '@/components/shared/background-effect';
 
 // import globeImage from '/public/assets/images/globe-network.svg';
 
@@ -8,11 +9,7 @@ export default function SignInPage() {
   return (
     <div className="relative min-h-screen w-full bg-gray-300 py-8">
       {/* Consistent dotted background */}
-      <div className="absolute inset-0 flex justify-around opacity-75 pointer-events-none">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="w-px bg-dotted-line-y" style={{ backgroundSize: '1px 8px' }} />
-        ))}
-      </div>
+      <BackgroundEffect lineColor='gray-400' />
       
       <div className="container bg-white rounded-lg 2xl:h-[80vh] mx-auto lg:max-w-5xl xl:max-w-6xl relative grid n grid-cols-1 lg:grid-cols-2">
         {/* Left Column: Sign-In Form */}
