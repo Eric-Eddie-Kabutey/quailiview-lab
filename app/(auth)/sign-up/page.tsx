@@ -4,7 +4,6 @@ import { CheckIcon } from 'lucide-react';
 import Image from 'next/image';
 import BackgroundEffect from '@/components/shared/background-effect';
 
-// Import placeholder logos
 
 
 const includedFeatures = [

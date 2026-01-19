@@ -60,18 +60,18 @@ export default function Testimonials() {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
+    <section className="relative -mt-2 sm:mt-0 bg-white pt-8 pb-12 sm:py-32 overflow-hidden">
       {/* faint decorated background */}
       <BackgroundEffect lineColor='gray-400' />
       <div className="relative mx-auto lg:max-w-4xl xl:max-w-5xl px-4 sm:px-6">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-medium text-[##8E92A2]">WE LOVE DEVELOPERS</p>
-          <h2 className="mt-4 md:mt-6 text-4xl font-semibold tracking-tight leading-13 text-gray-900 sm:text-5xl">
+          <h2 className="mt-2 md:mt-6 text-4xl font-semibold tracking-tight leading-13 text-gray-900 sm:text-5xl">
             They talk about it better than us
           </h2>
         </div>
 
-        <div className="mt-20 relative h-[400px] md:h-[350px] max-w-3xl mx-auto">
+        <div className="mt-6 md:mt-20 relative h-[400px] md:h-[350px] max-w-3xl mx-auto">
           {/* 1. Invisible Embla Carousel for functionality ONLY */}
           <div className="absolute inset-0 opacity-0 pointer-events-none" ref={emblaRef}>
             <div className="flex flex-col h-full">

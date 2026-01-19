@@ -7,13 +7,13 @@ export default function Header() {
             <div className='container mx-auto h-16 lg:max-w-5xl xl:max-w-6xl flex items-center justify-center'>
                 <Link href='/'>
                     <Image
-                        src='/assets/logo/logo-colored.png'
+                        src='/assets/logo/logo1.svg'
                         alt='Site Logo'
-                        width={100}
-                        height={24}
+                        width={140}
+                        height={32}
                     />
                 </Link>
             </div>
 		</header>
 	)
-}
+} 

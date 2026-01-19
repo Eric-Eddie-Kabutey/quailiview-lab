@@ -40,7 +40,7 @@ const itemVariants: Variants = {
 
 export default function HowItWorks() {
   return (
-    <section id='how-it-works' className="relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden">
+    <section id='how-it-works' className="relative -mt-2 sm:mt-0 bg-[#03444A] text-white pt-8 pb-8 sm:py-32 overflow-hidden">
       {/* Re-using the dotted background, now with a darker color */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
@@ -52,10 +52,10 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-medium text-gray-400">HOW IT WORKS</p>
-          <h2 className="mt-4 md:mt-6  text-4xl font-bold tracking-tight leading-13 text-white sm:text-5xl">
+          <h2 className="mt-2 md:mt-6  text-4xl font-bold tracking-tight leading-13 text-white sm:text-5xl">
             How Qualiview Lab Delivers Smarter Software Testing
           </h2>
-          <p className="mt-6 md:mt-8 text-lg leading-8 text-gray-300">
+          <p className="mt-3 md:mt-8 text-lg leading-8 text-gray-300">
             We combine the speed and scale of AI automation with the precision of human testers to ensure your software is tested faster, more thoroughly, and with real-world accuracy from initial scans to final validation.
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function HowItWorks() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-16"
+          className="mt-6 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16"
         >
           {processSteps.map((step, index) => (
             <motion.div key={index} variants={itemVariants} className="text-center">

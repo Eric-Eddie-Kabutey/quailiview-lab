@@ -60,7 +60,7 @@ export default function Header() {
                 {/* site logo */}
 				<div className='mr-4 hidden md:flex'>
 					<Link href='/' className='mr-6 flex items-center space-x-2'>                        
-                        <Image src="/assets/logo/logo-colored.png" alt='Site logo' width={100} height={60} />
+                        <Image src="/assets/logo/logo1.svg" alt='Site logo' width={140} height={80} />
 					</Link>
                 </div>
                 
@@ -73,7 +73,7 @@ export default function Header() {
 				<div className='flex flex-1 items-center justify-between space-x-2 lg:hidden px-6 bg-white dark:bg-white'>
 					<Link href='/' className='font-bold'>
 						<Image
-							src='/assets/logo/logo-colored.png'
+							src='/assets/logo/logo1.svg'
 							alt='Site Logo'
 							width={100}
 							height={24}
@@ -92,9 +92,9 @@ export default function Header() {
 								className='font-bold text-lg mb-4'
 								onClick={() => setIsOpen(false)}>
 								<Image
-									src='/assets/logo/logo-colored.png'
+									src='/assets/logo/logo1.svg'
 									alt='Site Logo'
-									width={100}
+									width={140}
 									height={24}
 								/>
 							</Link>
