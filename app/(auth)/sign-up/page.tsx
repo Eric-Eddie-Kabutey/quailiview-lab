@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { SignUpForm } from '@/components/auth/sign-up-form';
 import { CheckIcon } from 'lucide-react';
 import Image from 'next/image';

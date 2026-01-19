@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 import NewsletterSubscribe from './news-letter-subcribe';
 import BackgroundEffect from '../shared/background-effect';
 

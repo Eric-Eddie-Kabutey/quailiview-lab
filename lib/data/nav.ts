@@ -4,7 +4,6 @@ import {
 	FileText,
 	Newspaper,
 	Calendar,
-	GraduationCap,
 	Cog,
 	MonitorSmartphone,
 	GanttChartSquare,

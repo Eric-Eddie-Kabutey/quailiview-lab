@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { motion } from '@/components/module/framer-motion'
-import { ChevronDown, Menu } from 'lucide-react'
+import { Menu } from 'lucide-react'
 
 import {
 	NavigationMenu,
@@ -11,7 +11,6 @@ import {
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -75,8 +74,8 @@ export default function Header() {
 						<Image
 							src='/assets/logo/logo1.svg'
 							alt='Site Logo'
-							width={100}
-							height={24}
+							width={140}
+							height={32}
 						/>
 					</Link>
 					<Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -95,7 +94,7 @@ export default function Header() {
 									src='/assets/logo/logo1.svg'
 									alt='Site Logo'
 									width={140}
-									height={24}
+									height={32}
 								/>
 							</Link>
 							<MobileNav setIsOpen={setIsOpen} />

@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { Mail, MapPin } from 'lucide-react';
 
 // Your image paths are preserved
-import footerLogoBg from '/public/images/footer-logo-bg.png';
-
 const footerLinks = {
   company: [
     { name: 'About Us', href: '/about-us' },
@@ -80,7 +78,15 @@ export default function Footer() {
         >
           {/* Column 1: Brand and Copyright - Converted to motion.div */}
           <motion.div variants={itemVariants} className="flex flex-col justify-between">
-            <h3 className="text-lg font-semibold">Qualiview Lab</h3>
+            <Link href="/" className="inline-block">
+              <Image 
+                src="/assets/logo/logo1.svg" 
+                alt="Qualiview Lab Logo" 
+                width={160} 
+                height={40} 
+                className="brightness-0 invert" 
+              />
+            </Link>
             <p className="text-sm text-gray-400 mt-24">© 2025 Qualiview Lab</p>
           </motion.div>
 

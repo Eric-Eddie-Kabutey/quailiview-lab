@@ -21,12 +21,7 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));;
 }
 
-// Function to get a single post's metadata
-function getPost(slug: string): { frontmatter: Post; content: string } {
-  const markdownFile = fs.readFileSync(path.join('content/blog', slug + '.mdx'), 'utf-8');
-  const { data, content } = matter(markdownFile);
-  return { frontmatter: data as Post, content };
-}
+
 
 
 export default async function PostPage({ params }: BlogPostPageProps) {

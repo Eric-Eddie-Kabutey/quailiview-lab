@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { motion } from 'framer-motion';
 import { ArrowUp, ArrowDown } from 'lucide-react';
