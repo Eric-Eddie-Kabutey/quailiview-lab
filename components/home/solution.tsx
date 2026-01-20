@@ -34,17 +34,17 @@ const SolutionCard = ({
     transition={{ duration: 0.6, ease: 'easeOut', delay: animationDelay }}
     className={`rounded-2xl shadow-sm overflow-hidden ${cardBgColor}`}
   >
-    <div className="flex items-end min-h-[260px]">
-      <div className="w-1/2 md:w-3/5 p-8 flex items-center">
-        <h3 className="text-lg md:text-2xl font-semibold text-gray-900">{title}</h3>
+    <div className="flex items-end min-h-[300px]">
+      <div className="w-1/2 md:w-3/5 p-12 md:p-16 flex items-center">
+        <h3 className="text-lg md:text-3xl font-semibold text-gray-900">{title}</h3>
       </div>
-      <div className={`w-1/2 md:w-2/5 p-6 ${visualBgColor}`}>
+      <div className={`w-1/2 md:w-2/5 p-10 md:p-12 ${visualBgColor}`}>
         {visual}
       </div>
     </div>
     
-    <div className="p-8 border-t border-gray-300/50">
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+    <div className="p-12 md:p-16 border-t border-gray-300/50">
+      <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
     </div>
   </motion.div>
 );
@@ -52,7 +52,7 @@ const SolutionCard = ({
 export default function SolutionsSection() {
   return (
     // Changed sm:pb-20 to sm:pb-10 to reduce gap significantly
-    <section id='solutions' className="relative -mt-1 sm:mt-0 bg-white pt-6 pb-6 sm:pt-32 sm:pb-10 overflow-hidden">
+    <section id='solutions' className="relative -mt-1 sm:mt-0 bg-white pt-12 pb-12 sm:pt-48 sm:pb-32 overflow-hidden">
       <BackgroundEffect lineColor='gray-400' />
 
       <div className="relative mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6">
@@ -66,7 +66,7 @@ export default function SolutionsSection() {
           </p>
         </div>
 
-        <div className="mt-6 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-8 items-start">
+        <div className="mt-12 md:mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           <SolutionCard
             title="By Capability"
             description="Comprehensive testing solutions across technologies from functional and performance testing to AI assurance and security compliance, we deliver end-to-end quality assurance services that ensure your applications are reliable, secure, and ready for market."
@@ -75,7 +75,7 @@ export default function SolutionsSection() {
             visual={<Image width={100} height={100} src="/assets/icons/capacity.png" alt="Capability UI mockup" className="rounded-lg shadow-lg w-full max-w-[200px] h-full" />}
           />
           
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-16 lg:gap-32">
             <SolutionCard
               title="By Technology"
               description="Multi-Platform testing expertise across all devices and channels comprehensive testing solutions for mobile apps, web applications, location-based services, streaming platforms, connected devices, and voice interfaces to ensure seamless user experiences across every touchpoint."
