@@ -44,12 +44,36 @@ export const mdxComponents:  MDXComponents = {
 			</blockquote>
 		),
 
-		// Links: Consistent brand color.
-		a: ({ href, children }) => (
+		// Links: Consistent brand color with prop passthrough.
+		a: (props) => (
 			<a
-				href={href}
-				className='text-brand-teal font-medium no-underline hover:underline'>
+				{...props}
+				className={`text-[#0f4c5c] font-medium no-underline hover:underline ${props.className || ''}`}>
+				{props.children}
+			</a>
+		),
+
+		// Custom components for specific needs
+		RegisterButton: ({ href, children }: { href: string; children: React.ReactNode }) => (
+			<a 
+				href={href} 
+				className='inline-flex items-center justify-center bg-[#03444A] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#0c3b47] transition-all no-underline shadow-sm border-none my-4'
+				style={{ textDecoration: 'none', color: 'white' }}
+			>
 				{children}
+			</a>
+		),
+
+		PulseLink: ({ href, children }: { href: string; children: React.ReactNode }) => (
+			<a 
+				href={href} 
+				className='inline-flex items-center gap-2 text-[#0f4c5c] font-bold hover:text-blue-600 transition-all duration-300 hover:scale-[1.02] no-underline group'
+			>
+				<span className="relative flex h-3 w-3">
+					<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+					<span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500 group-hover:bg-blue-600"></span>
+				</span>
+				<span className="group-hover:underline decoration-blue-500 underline-offset-4 decoration-2">{children}</span>
 			</a>
 		),
 

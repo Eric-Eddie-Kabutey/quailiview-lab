@@ -19,6 +19,15 @@ type RawEventData = {
 
 const allEventsRaw: RawEventData[] = [
     {
+        slug: 'qa-in-motion-go-live',
+        title: 'Quality Assurance in Motion: Qualivew Lab Official Go-Live',
+        date: '2026-05-01',
+        format: 'Zoom Meeting',
+        location: 'Johannesburg Time (19:00–19:40)',
+        summary: 'Join us for the official go-live of QualiView Lab. A monthly community series focused on real-world software quality and testing practices.',
+        coverImage: eventImg2,
+    },
+    {
         slug: 'transforming-testing-2025',
         title: 'Transforming Testing in 2025',
         date: '2025-03-10',

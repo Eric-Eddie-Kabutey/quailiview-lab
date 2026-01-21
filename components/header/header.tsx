@@ -195,13 +195,14 @@ const DesktopNav = ({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) => 
 					</NavigationMenuItem>
 				) : (
 					<NavigationMenuItem key={navItem.label}>
-						<Link href={navItem.href} legacyBehavior passHref>
-								<NavigationMenuLink
-									className={navigationMenuTriggerStyle()}
-								>
+						<NavigationMenuLink asChild>
+							<Link
+								href={navItem.href}
+								className={navigationMenuTriggerStyle()}
+							>
 								{navItem.label}
-							</NavigationMenuLink>
-						</Link>
+							</Link>
+						</NavigationMenuLink>
 					</NavigationMenuItem>
 				)
 			)}

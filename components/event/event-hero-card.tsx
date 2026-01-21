@@ -12,8 +12,8 @@ export default function EventHeroCard({ event }: { event: Event }) {
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between text-xs text-black font-medium uppercase">
-          <span>Date: {format(event.date, 'MMMM d, yyyy')}</span>
-          <span>{event.formatAndLocation ? `Location: ${event.formatAndLocation}` : `Format: ${event.formatAndLocation}`}</span>
+          <span>{event.date}</span>
+          <span>{event.formatAndLocation}</span>
         </div>
         <h3 className="mt-4 text-lg text-black font-medium leading-tight">{event.title}</h3>
         <p className="mt-2 text-sm text-[#4E4F54] line-clamp-3 flex-grow">{event.summary}</p>
