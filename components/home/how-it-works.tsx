@@ -40,7 +40,7 @@ const itemVariants: Variants = {
 
 export default function HowItWorks() {
   return (
-    <section id='how-it-works' className="relative -mt-2 sm:mt-0 bg-[#03444A] text-white pt-8 pb-8 sm:py-32 overflow-hidden">
+    <section id='how-it-works' className="relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden">
       {/* Re-using the dotted background, now with a darker color */}
       <div className="absolute inset-0 flex justify-around opacity-30">
         {[...Array(6)].map((_, i) => (
@@ -66,7 +66,7 @@ export default function HowItWorks() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-6 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16"
+          className="mt-12 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-18 md:gap-20 lg:gap-24"
         >
           {processSteps.map((step, index) => (
             <motion.div key={index} variants={itemVariants} className="text-center">

@@ -25,7 +25,7 @@ const itemVariants = {
 
 export default function TrustedBy() {
 	return (
-		<section className='bg-white py-16 sm:py-24'>
+		<section className='bg-white pt-24 pb-16 sm:pt-32 sm:pb-20'>
 			<div className='mx-auto lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6'>
 				<div className='flex flex-col items-center gap-10'>
 					<p className='text-center font-medium text-slate-600'>

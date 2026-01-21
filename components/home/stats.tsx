@@ -32,7 +32,7 @@ export default function Stats() {
     // Set pt-0 and removed all top margins/paddings
     <section 
       ref={ref} 
-      className="relative w-full mt-12 sm:mt-32 pt-16 pb-16 sm:pt-40 sm:pb-24 overflow-hidden bg-[#c0683a]"
+      className="relative w-full py-24 sm:py-32 overflow-hidden bg-[#c0683a]"
     >
       {/* BackgroundEffect is absolute, so it won't take up space */}
       <div className="absolute inset-0 pointer-events-none">

@@ -60,7 +60,7 @@ export default function Testimonials() {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   return (
-    <section className="relative -mt-2 sm:mt-0 bg-white pt-8 pb-12 sm:py-32 overflow-hidden">
+    <section className="relative bg-white py-24 sm:py-32 overflow-hidden">
       {/* faint decorated background */}
       <BackgroundEffect lineColor='gray-400' />
       <div className="relative mx-auto lg:max-w-4xl xl:max-w-5xl px-4 sm:px-6">
