@@ -2,9 +2,9 @@ import { Event } from '@/types';
 import { format, isSameMonth, isSameYear, startOfToday, isBefore } from 'date-fns';
 
 // image imports
-import eventImg1 from '../public/assets/images/event/global-software-testing-summit-2025.png';
-import eventImg2 from '../public/assets/images/event/global-software-testing-summit-2025.png';
-import eventImg3 from '../public/assets/images/event/transforming-testing-in-2025.png';
+import eventImg1 from '../public/assets/images/event/01.png';
+import eventImg2 from '../public/assets/images/event/01.png';
+import eventImg3 from '../public/assets/images/event/01.png';
 
 type RawEventData = {
     slug: string;
