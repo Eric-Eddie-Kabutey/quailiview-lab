@@ -53,7 +53,7 @@ export default function HeroSection() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">Hybrid Power</h3>
                 <p className="text-gray-600">
-                  Get the best of AI speed and human judgment in one seamless workflow.
+                  Get the best of AI speed and human judgement in one seamless workflow.
                 </p>
               </div>
               

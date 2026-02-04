@@ -118,9 +118,9 @@ export default function CurrentOpenings() {
               We&apos;re always growing our network of testers and QA professionals. Send us your resume, and we&apos;ll reach out when something matches your skills.
             </p>
             <div className="mt-6">
-              <a href="mailto:careers@qualiviewlab.com" className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-[#03444A] rounded-lg shadow-sm hover:bg-[#03444A] transition-colors">
+              <a href="mailto:admin@qualiviewlab.com" className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white bg-[#03444A] rounded-lg shadow-sm hover:bg-[#03444A] transition-colors">
                 <Mail size={16} />
-                careers@qualiviewlab.com
+                admin@qualiviewlab.com
               </a>
             </div>
           </motion.div>

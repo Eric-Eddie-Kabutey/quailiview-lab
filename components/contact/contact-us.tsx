@@ -244,8 +244,8 @@ export default function ContactUs() {
                                     <Image src="/assets/icons/mail.png" alt="Mail" width={24} height={24} className="w-6 h-6" />
                                     Email Us
                                 </h3>
-                                <a href='mailto:hello@qualiviewlab.com' className='text-gray-700 hover:text-[#03444A] block'>
-                                    hello@qualiviewlab.com
+                                <a href='mailto:admin@qualiviewlab.com' className='text-gray-700 hover:text-[#03444A] block'>
+                                    admin@qualiviewlab.com
                                 </a>
                             </div>
 

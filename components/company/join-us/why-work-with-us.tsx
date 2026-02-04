@@ -9,7 +9,7 @@ const benefitsData = [
   {
     icon: Lightbulb,
     title: "We're Hybrid by Design",
-    description: 'AI and humans working together — and the same goes for our team. We believe in flexible, remote-first collaboration across borders and time zones.',
+    description: 'AI and humans working together and the same goes for our team. We believe in flexible, remote-first collaboration across borders and time zones.',
   },
   {
     icon: BrainCircuit,
@@ -19,7 +19,7 @@ const benefitsData = [
   {
     icon: Rocket,
     title: 'We Move Fast, But Test Smarter',
-    description: 'We’re not just another outsourcing agency. We value speed, but never at the cost of quality. You’ll help improve real-world software — and how it’s tested.',
+    description: 'We’re not just another outsourcing agency. We value speed, but never at the cost of quality. You’ll help improve real-world software and how it’s tested.',
   },
 ];
 

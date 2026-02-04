@@ -47,7 +47,7 @@ export const samplePost: Post = {
 
       <h2>Conclusion</h2>
       <p>
-        AI is no longer a futuristic add-on — it&apos;s becoming the backbone of modern QA strategies. The most successful teams in 2025 will be those that integrate AI thoughtfully, using it to boost efficiency without sacrificing the human judgment that defines great software. If your testing process feels stuck in yesterday, now is the time to embrace the future.
+        AI is no longer a futuristic add-on — it&apos;s becoming the backbone of modern QA strategies. The most successful teams in 2025 will be those that integrate AI thoughtfully, using it to boost efficiency without sacrificing the human judgement that defines great software. If your testing process feels stuck in yesterday, now is the time to embrace the future.
       </p>
     </>
   ),

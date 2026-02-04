@@ -69,52 +69,63 @@ export default function Header() {
 					</nav>
 
 				{/* Mobile Menu */}
-				<div className='flex flex-1 items-center justify-between space-x-2 lg:hidden px-6 bg-white dark:bg-white'>
-					<Link href='/' className='font-bold'>
-						<Image
-							src='/assets/logo/logo1.svg'
-							alt='Site Logo'
-							width={140}
-							height={32}
-						/>
-					</Link>
-					<Sheet open={isOpen} onOpenChange={setIsOpen}>
-						<SheetTrigger asChild>
-							<button className='px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0'>
-								<Menu className='h-6 w-6' />
-								<span className='sr-only'>Toggle Menu</span>
-							</button>
-						</SheetTrigger>
-						<SheetContent side='right' className='pr-0 flex flex-col p-6'>
-							<Link
-								href='/'
-								className='font-bold text-lg mb-4'
-								onClick={() => setIsOpen(false)}>
-								<Image
-									src='/assets/logo/logo1.svg'
-									alt='Site Logo'
-									width={140}
-									height={32}
-								/>
-							</Link>
-							<MobileNav setIsOpen={setIsOpen} />
-							<div className='mt-auto pt-6'>
-								<div className='flex flex-col space-y-2'>
-									<Link
-										href='/sign-in'
-										className='w-full text-black text-center py-2 border rounded-md'>
-										Sign In
-									</Link>
-									<Link
-										href='sign-up'
-										className='w-full text-center py-2 bg-[#03444A] text-white rounded-md'>
-										Get Started
-									</Link>
-								</div>
-							</div>
-						</SheetContent>
-					</Sheet>
-				</div>
+<div className='flex flex-1 items-center justify-between space-x-2 lg:hidden px-6 bg-white dark:bg-white'>
+    <Link href='/' className='font-bold'>
+        <Image
+            src='/assets/logo/logo1.svg'
+            alt='Site Logo'
+            width={140}
+            height={32}
+        />
+    </Link>
+    
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger asChild>
+            <button 
+                type="button"
+                className='inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-transparent focus:outline-none'
+                aria-label="Open Menu"
+            >
+                {/* strokeWidth={3} makes it very bold; h-7 w-7 makes it larger */}
+                <Menu className='h-7 w-7' strokeWidth={3} />
+                <span className='sr-only'>Toggle Menu</span>
+            </button>
+        </SheetTrigger>
+        
+        <SheetContent side='right' className='pr-0 flex flex-col p-6 bg-white'>
+            <Link
+                href='/'
+                className='font-bold text-lg mb-4'
+                onClick={() => setIsOpen(false)}>
+                <Image
+                    src='/assets/logo/logo1.svg'
+                    alt='Site Logo'
+                    width={140}
+                    height={32}
+                />
+            </Link>
+            
+            <MobileNav setIsOpen={setIsOpen} />
+            
+            <div className='mt-auto pt-6'>
+                <div className='flex flex-col space-y-2 pr-6'>
+                    <Link
+                        href='/sign-in'
+                        onClick={() => setIsOpen(false)}
+                        className='w-full text-black text-center py-2 border rounded-md font-medium'>
+                        Sign In
+                    </Link>
+                    <Link
+                        href='/sign-up'
+                        onClick={() => setIsOpen(false)}
+                        className='w-full text-center py-2 bg-[#03444A] text-white rounded-md font-medium'>
+                        Get Started
+                    </Link>
+                </div>
+            </div>
+        </SheetContent>
+    </Sheet>
+</div>
                 
 				
 					{/* action buttons */}
