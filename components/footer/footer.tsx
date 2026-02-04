@@ -19,7 +19,7 @@ const footerLinks = {
     { name: 'FAQs', href: '/#faq' },
     { name: 'Contact Us', href: '/contact-us' },
     { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms of Service', href: '#' },git push
+    { name: 'Terms of Service', href: '#' },
     { name: 'Security & Compliance', href: '#' },
   ],
 };
