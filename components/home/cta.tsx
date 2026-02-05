@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 interface CTAProps {
   title?: string;
   description?: string;
-  buttonText?: string;ddddds
+  buttonText?: string;
   buttonLink?: string;
 }
 
