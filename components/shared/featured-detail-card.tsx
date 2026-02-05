@@ -53,7 +53,7 @@ export function FeatureDetailCard({
               <CheckCircle className="w-5 h-5 mt-1 text-white/70 flex-shrink-0" />
               <span>
                 <span className="font-medium text-white/90">{feature.text}</span>
-                {feature.subtext && <span className="text-white/70"> – {feature.subtext}</span>}
+                {feature.subtext && <span className="text-white/70"> {feature.subtext}</span>}
               </span>
             </li>
           ))}

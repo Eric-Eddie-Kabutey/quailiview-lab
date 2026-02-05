@@ -42,10 +42,10 @@ export const jobOpenings: JobOpening[] = [
       'Comfortable working independently and within distributed teams'
     ],
     platformKnowledge: [
-      'Jira – defect and test management',
-      'Confluence – documentation',
-      'BrowserStack – cross-browser and device testing',
-      'Postman – basic API testing (GET, POST, validations)',
+      'Jira defect and test management',
+      'Confluence documentation',
+      'BrowserStack cross-browser and device testing',
+      'Postman basic API testing (GET, POST, validations)',
       'Web and/or mobile application testing'
     ],
     niceToHave: [
@@ -57,7 +57,7 @@ export const jobOpenings: JobOpening[] = [
   {
     slug: 'client-acquisition-partnerships-lead',
     tag: 'Business',
-    title: 'Client Acquisition & Partnerships Lead – Startups (Contract)',
+    title: 'Client Acquisition & Partnerships Lead Startups (Contract)',
     description: 'Responsible for bringing clients into QualiView Labs. You will engage with startup founders, product teams, incubators, and agencies to identify testing needs and position Qualiview Labs as a trusted quality partner.',
     location: 'Remote (West Africa focus)',
     experience: '2–5 years',
