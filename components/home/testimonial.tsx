@@ -19,14 +19,14 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    quote: "We used to spend days writing and maintaining unit tests. With Qualiview Lab, we got high-quality, AI-generated tests reviewed by real QA pros — and reduced our test writing time by over 70%.",
+    quote: "We used to spend days writing and maintaining unit tests. With Qualiview Lab, we got high-quality, AI-generated tests reviewed by real QA pros and reduced our test writing time by over 70%.",
     name: 'Maya Rodriguez',
     title: 'Engineering Lead at CodeZen',
     avatar: "/assets/images/avatars/maya-rodriguez.png",
     cardBg: 'bg-[#E6F1F1]',
   },
   {
-    quote: "Their hybrid model caught UX issues that our automation suite completely missed. The human testers were incredibly thorough — it felt like they were part of our in-house team.",
+    quote: "Their hybrid model caught UX issues that our automation suite completely missed. The human testers were incredibly thorough it felt like they were part of our in-house team.",
     name: 'Rishi Verma',
     title: 'Product Manager at Nexara',
     avatar: '/assets/images/avatars/rishi-verma.png',

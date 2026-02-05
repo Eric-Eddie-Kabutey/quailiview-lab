@@ -32,7 +32,7 @@ const allEventsRaw: RawEventData[] = [
         title: 'Transforming Testing in 2025',
         date: '2025-03-10',
         format: 'Live Webinar',
-        summary: 'Discover how AI is reshaping the way QA teams work — from predictive defect detection to automated test generation.',
+        summary: 'Discover how AI is reshaping the way QA teams work from predictive defect detection to automated test generation.',
         coverImage: eventImg1,
     },
     {

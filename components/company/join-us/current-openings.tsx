@@ -13,27 +13,7 @@ const tagStyles: { [key: string]: string } = {
   Business: 'bg-green-100 text-green-700 border border-green-200',
 };
 
-// Data for the job openings
-const jobOpenings = [
-  {
-    tag: 'Analyst',
-    title: 'Junior Software Test Analyst (Manual Testing) – Contract',
-    description: 'We are looking for Junior Software Test Analysts who are passionate about manual testing, quality, and understanding how software products work end-to-end. You will support fast-paced Agile teams on real startup products.',
-    location: 'Remote (West Africa based)',
-    type: 'Contract (1–2 years exp)',
-    salary: 'Competitive',
-    applyLink: '#',
-  },
-  {
-    tag: 'Business',
-    title: 'Client Acquisition & Partnerships Lead – Startups (Contract)',
-    description: 'Responsible for bringing clients into QualiView Labs. You will engage with startup founders, product teams, incubators, and agencies to identify testing needs and position Qualiview Labs as a trusted quality partner.',
-    location: 'Remote (West Africa focus)',
-    type: 'Contract (2–5 years exp)',
-    salary: 'Competitive',
-    applyLink: '#',
-  },
-];
+import { jobOpenings } from '@/data/mock-jobs';
 
 // Animation variants
 const containerVariants: Variants = {
@@ -96,14 +76,13 @@ export default function CurrentOpenings() {
                   <h3 className="mt-4 text-xl font-semibold text-gray-900">{job.title}</h3>
                   <p className="mt-2 text-gray-600">{job.description}</p>
                 </div>
-                <Link href={job.applyLink} className="w-21 md:w-auto mt-4 sm:mt-0 sm:ml-6 px-6 py-2 text-sm text-[#03444A] font-semibold border border-[#03444A] rounded-md hover:bg-gray-100 transition-colors flex-shrink-0">
-                  Apply
+                <Link href={`/join-us/${job.slug}`} className="w-21 md:w-auto mt-4 sm:mt-0 sm:ml-6 px-6 py-2 text-sm text-[#03444A] font-semibold border border-[#03444A] rounded-md hover:bg-[#03444A] hover:text-white transition-colors flex-shrink-0 text-center">
+                  View Job
                 </Link>
               </div>
               <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-800">
                 <div className="flex items-center gap-2"><MapPin size={16} />{job.location}</div>
-                <div className="flex items-center gap-2"><CalendarDays size={16} />{job.type}</div>
-                <div className="flex items-center gap-2"><Banknote size={16} />{job.salary}</div>
+                <div className="flex items-center gap-2"><CalendarDays size={16} />{job.experience}</div>
               </div>
             </motion.div>
           ))}

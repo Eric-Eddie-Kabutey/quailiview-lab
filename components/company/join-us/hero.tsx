@@ -50,7 +50,7 @@ export default function JoinUsHero() {
             </p>
             <div className="mt-4">
               <Link
-                href="#"
+                href="/join-us"
                 className="inline-block px-8 py-3 font-semibold text-white bg-[#03444A] rounded-lg shadow-sm hover:bg-[#03444A] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#03444A] focus:ring-offset-2"
               >
                 Become a Tester

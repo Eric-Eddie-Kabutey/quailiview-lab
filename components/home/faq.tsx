@@ -14,7 +14,7 @@ const faqData = [
 		question:
 			'What makes Qualiview Lab different from traditional QA services?',
 		answer:
-			'Unlike most QA providers, we use a hybrid model — combining AI-driven automation for speed and coverage, with expert human testers for edge cases, usability, and accuracy. This gives you the best of both worlds.',
+			'Unlike most QA providers, we use a hybrid model combining AI-driven automation for speed and coverage, with expert human testers for edge cases, usability, and accuracy. This gives you the best of both worlds.',
 	},
 	{
 		question: 'How does your AI testing actually work?',
@@ -25,12 +25,12 @@ const faqData = [
 		question:
 			'Do your human testers manually test everything again after the AI?',
 		answer:
-			'Not everything — our testers focus on areas that AI can’t reliably evaluate, like user experience, edge case behavior, and unexpected interactions. We optimize human effort where it adds the most value.',
+			'Not everything our testers focus on areas that AI can’t reliably evaluate, like user experience, edge case behavior, and unexpected interactions. We optimize human effort where it adds the most value.',
 	},
 	{
 		question: 'Can you work with our existing QA or dev team?',
 		answer:
-			'Absolutely. We regularly integrate with in-house QA teams, product managers, and developers. We can adapt to your tools, workflows, and delivery timelines to complement — not replace — your existing setup.',
+			'Absolutely. We regularly integrate with in-house QA teams, product managers, and developers. We can adapt to your tools, workflows, and delivery timelines to complement not replace your existing setup.',
 	},
 	{
 		question: 'How fast can we get started?',

@@ -15,7 +15,7 @@ export const sampleCaseStudy: Post = {
   content: (
     <>
       <p>
-        The software testing landscape has never been more dynamic. In 2025, AI-powered testing has moved from “experimental” to “essential.” Teams around the world are leveraging intelligent automation to accelerate testing cycles, expand coverage, and reduce costs — all while maintaining the highest quality standards.
+        The software testing landscape has never been more dynamic. In 2025, AI-powered testing has moved from “experimental” to “essential.” Teams around the world are leveraging intelligent automation to accelerate testing cycles, expand coverage, and reduce costs all while maintaining the highest quality standards.
       </p>
       <p>
         At Qualiview Lab, we&apos;ve seen first-hand how AI transforms not just testing speed, but the very way QA teams operate.
@@ -42,12 +42,12 @@ export const sampleCaseStudy: Post = {
       </ol>
       
       <blockquote>
-        &quot;AI can’t replace human testers — it amplifies their abilities.&quot;
+        &quot;AI can’t replace human testers it amplifies their abilities.&quot;
       </blockquote>
 
       <h2>Conclusion</h2>
       <p>
-        AI is no longer a futuristic add-on — it&apos;s becoming the backbone of modern QA strategies. The most successful teams in 2025 will be those that integrate AI thoughtfully, using it to boost efficiency without sacrificing the human judgement that defines great software. If your testing process feels stuck in yesterday, now is the time to embrace the future.
+        AI is no longer a futuristic add-on it&apos;s becoming the backbone of modern QA strategies. The most successful teams in 2025 will be those that integrate AI thoughtfully, using it to boost efficiency without sacrificing the human judgement that defines great software. If your testing process feels stuck in yesterday, now is the time to embrace the future.
       </p>
     </>
   ),

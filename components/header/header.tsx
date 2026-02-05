@@ -108,18 +108,12 @@ export default function Header() {
             <MobileNav setIsOpen={setIsOpen} />
             
             <div className='mt-auto pt-6'>
-                <div className='flex flex-col space-y-2 pr-6'>
+                <div className='pr-6'>
                     <Link
-                        href='/sign-in'
+                        href='/app'
                         onClick={() => setIsOpen(false)}
-                        className='w-full text-black text-center py-2 border rounded-md font-medium'>
-                        Sign In
-                    </Link>
-                    <Link
-                        href='/sign-up'
-                        onClick={() => setIsOpen(false)}
-                        className='w-full text-center py-2 bg-[#03444A] text-white rounded-md font-medium'>
-                        Get Started
+                        className='block w-full text-center py-2 bg-[#03444A] text-white rounded-md font-medium'>
+                        Visit our App
                     </Link>
                 </div>
             </div>
@@ -129,18 +123,13 @@ export default function Header() {
                 
 				
 					{/* action buttons */}
-					<div className='hidden lg:flex items-center justify-end space-x-4 bg-white dark:bg-white'>
-						<nav className='flex items-center space-x-2'>
-							<Link href='/sign-in' className='py-2 px-4 border rounded-md text-sm text-black'>
-								Sign In
-							</Link>
-							<Link
-								href='/sign-up'
-								className='py-2 px-4 bg-[#03444A] text-white rounded-md text-sm'>
-								Get Started
-							</Link>
-						</nav>
-					</div>
+					<div className='hidden lg:flex items-center justify-end'>
+	<Link
+		href='/app'
+		className='py-2 px-6 bg-[#03444A] text-white rounded-md text-sm font-medium transition-colors hover:bg-[#023338]'>
+		Visit our App
+	</Link>
+</div>
 			</div>
 		</header>
 	)

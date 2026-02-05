@@ -1,11 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
+interface CTAProps {
+  title?: string;
+  description?: string;
+  buttonText?: string;ddddds
+  buttonLink?: string;
+}
 
-export default function CTA() {
+export default function CTA({ 
+  title = "Ready to Ship Bug-Free Software, Faster?",
+  description = "AI does the heavy lifting. Experts make it bulletproof.",
+  buttonText,
+  buttonLink = "/contact-us"
+}: CTAProps) {
   return (
     <section className="relative bg-[#03444A] text-white py-24 sm:py-32 overflow-hidden">
       {/* Background with subtle vertical lines (optional, but matches other sections) */}
@@ -26,17 +38,19 @@ export default function CTA() {
             className="flex-1 flex flex-col gap-6"
           >
             <h2 className="text-4xl sm:text-4xl font-semibold max-w-[476px] tracking-tight leading-13 text-white">
-              Ready to Ship Bug-Free Software, Faster?
+              {title}
             </h2>
             <p className="text-lg text-white/90 max-w-[376px] leading-relaxed">
-              AI does the heavy lifting. Experts make it bulletproof.
+              {description}
             </p>
-            <div className="mt-4">
-              <button className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-black bg-white rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-cta-bg-dark-teal">
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
+            {buttonText && (
+              <div className="mt-4">
+                <Link href={buttonLink} className="inline-flex items-center justify-center gap-2 px-8 py-3 font-semibold text-black bg-white rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+                  {buttonText}
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            )}
           </motion.div>
           
           {/* Mobile Right Column: Globe Image */}

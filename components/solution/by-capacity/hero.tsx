@@ -53,7 +53,7 @@ export default function Hero() {
               />
             </div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At Qualiview Lab, we offer comprehensive software testing services powered by a unique blend of AI automation and expert human validation. From functionality to performance, security, and AI assurance — our hybrid approach ensures your product ships faster and with confidence.
+              At Qualiview Lab, we offer comprehensive software testing services powered by a unique blend of AI automation and expert human validation. From functionality to performance, security, and AI assurance our hybrid approach ensures your product ships faster and with confidence.
             </p>
           </motion.div>
           

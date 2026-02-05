@@ -34,7 +34,7 @@ export default function HeroSection() {
               </h1>
               <p className="mt-4 text-lg text-gray-600 leading-relaxed">
                 Qualiview Lab bridges the speed of AI-driven automation with the
-                precision of expert human testing — delivering faster, more
+                precision of expert human testing delivering faster, more
                 reliable, and deeply accurate QA results for modern software teams.
               </p>
             </div>

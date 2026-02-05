@@ -15,6 +15,9 @@ export default function JoinUsPage() {
         <CurrentOpenings />
 
         {/* cta - reusable */}
-        <CTA />
+        <CTA 
+            title="Grow Your Career with QualiView Labs"
+            description="We're constantly expanding and looking for passionate QA professionals to join our network."
+        />
     </>)
  }
