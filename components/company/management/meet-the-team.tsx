@@ -19,14 +19,14 @@ const teamData: TeamMember[] = [
     name: 'Edith E.A. Abofra',
     title: 'Executive Director',
     bio: 'With an IT background dating back to 2014, Edith brings seven years of focused experience in software testing, test management, and quality leadership. Her work centres on helping engineering and QA leaders embed quality as a strategic part of product delivery.',
-    imageColor: '/assets/images/team/1.jpg', 
+    imageColor: '/assets/images/team/21.jpg', 
   },
   {
     id: 2,
     name: 'Emily Murungi Muganzi',
     title: 'Operational Excellence: Independent Advisor',
     bio: 'With over 14 years of experience with a good specialist background in improving organisational effectiveness and delivery models, Emily provides independent advisory support focused on operational excellence, process maturity, and sustainable scale.',
-    imageColor: '/assets/images/team/21.jpg',
+    imageColor: '/assets/images/team/1.jpg',
   },
   {
     id: 3,

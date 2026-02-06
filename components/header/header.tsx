@@ -113,7 +113,7 @@ export default function Header() {
                         href='/app'
                         onClick={() => setIsOpen(false)}
                         className='block w-full text-center py-2 bg-[#03444A] text-white rounded-md font-medium'>
-                        Visit our App
+                        Explore Platform
                     </Link>
                 </div>
             </div>
@@ -127,7 +127,7 @@ export default function Header() {
 	<Link
 		href='/app'
 		className='py-2 px-6 bg-[#03444A] text-white rounded-md text-sm font-medium transition-colors hover:bg-[#023338]'>
-		Visit our App
+		Explore Platform
 	</Link>
 </div>
 			</div>
