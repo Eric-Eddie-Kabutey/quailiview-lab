@@ -1,2 +1,2 @@
 # QUALIVIEW LAB
-Smart, Fast, Reliable Software Testing
+Smart, Fast, Reliable Software Testing.
