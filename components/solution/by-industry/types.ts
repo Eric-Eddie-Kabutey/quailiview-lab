@@ -1,4 +1,4 @@
-export interface ServiceData {
+export interface IndustryService {
   id: string;
   category: string;
   title: string;

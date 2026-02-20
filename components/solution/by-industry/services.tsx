@@ -1,12 +1,12 @@
 import React from 'react';
-import { ServiceData } from './types';
+import { IndustryService } from './types';
 
-interface ServiceDataSectionProps {
-  service: ServiceData;
+interface IndustryServiceSectionProps {
+  service: IndustryService;
   index: number;
 }
 
-const ServiceDataSection: React.FC<ServiceDataSectionProps> = ({ service, index }) => {
+const IndustryServiceSection: React.FC<IndustryServiceSectionProps> = ({ service, index }) => {
   const isReversed = index % 2 !== 0;
 
   return (
@@ -61,4 +61,4 @@ const ServiceDataSection: React.FC<ServiceDataSectionProps> = ({ service, index 
   );
 };
 
-export default ServiceDataSection;
+export default IndustryServiceSection;
