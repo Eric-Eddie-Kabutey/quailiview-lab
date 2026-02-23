@@ -3,7 +3,7 @@
 import { jobOpenings } from '@/data/mock-jobs';
 import { useParams, notFound } from 'next/navigation';
 import { motion } from '@/components/module/framer-motion';
-import { MapPin, Users, ChevronLeft, Briefcase, Calendar } from 'lucide-react';
+import { MapPin, Users, ChevronLeft, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import BackgroundEffect from '@/components/shared/background-effect';
 

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Event } from '@/types/index';
-import { format } from 'date-fns';
 
 export default function EventHeroCard({ event }: { event: Event }) {    
     

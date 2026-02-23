@@ -2,7 +2,7 @@
 
 import { motion, Variants } from '@/components/module/framer-motion';
 import Link from 'next/link';
-import { MapPin, CalendarDays, Banknote, Globe, Mail } from 'lucide-react';
+import { MapPin, CalendarDays, Globe, Mail } from 'lucide-react';
 import BackgroundEffect from '@/components/shared/background-effect';
 
 // Define styles for different job tags for easy reuse
